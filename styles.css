@@ -351,3 +351,25 @@ a.project-card:hover { transform: translateY(-2px); border-color: var(--accent);
 .data-table th, .data-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 .data-table th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
 .data-table td:first-child { font-weight: 700; white-space: nowrap; }
+
+/* ---------- Perfil y contacto ---------- */
+.profile-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.profile-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; box-shadow: var(--shadow); min-width: 0;
+}
+.profile-card h3 { margin: 0 0 10px; font-size: 1.05rem; }
+.profile-card .profile-sub { margin-top: 20px; }
+.profile-card p { margin: 0 0 8px; }
+.profile-role { font-weight: 700; }
+.profile-meta { color: var(--muted); font-size: .9rem; }
+.profile-card .checklist { margin-top: 12px; font-size: .93rem; }
+.tags-soft li { background: var(--surface-alt); color: var(--text); border: 1px solid var(--border); }
+
+.contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.contact-list li {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px;
+}
+.contact-label { min-width: 90px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.contact-list a { word-break: break-all; }
