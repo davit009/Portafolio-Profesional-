@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>David García Vera · Portafolio</title>
-  <meta name="description" content="Portafolio profesional de David García Vera — Ingeniería en Sistemas Computacionales, Universidad de Montemorelos. Documentación de proyectos con contexto, herramientas, evidencias y resultados.">
+  <title>David García Vera · Portafolio profesional</title>
+  <meta name="description" content="Portafolio profesional de David García Vera, estudiante de Ingeniería en Sistemas Computacionales (Universidad de Montemorelos). Casos de estudio en gestión de actualizaciones con Action1, auditoría de datos con Python y control remoto de dispositivos con RustDesk.">
+  <meta property="og:title" content="David García Vera · Portafolio profesional">
+  <meta property="og:description" content="Soporte de TI, administración de endpoints y ciberseguridad. Tres casos de estudio en entornos empresariales.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,660 +20,275 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#inicio">Portafolio</a>
+      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">DG</span><span class="brand-name">David García Vera</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
-      <nav id="nav-menu" class="nav" aria-label="Principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#perfil">Perfil</a>
+      <nav id="nav-menu" class="nav" aria-label="Principal" data-spy>
+        <a href="#propuesta">Perfil</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a class="nav-cta" href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
-    <!-- ============ PORTADA ============ -->
-    <section id="inicio" class="hero">
+    <!-- ================= PORTADA ================= -->
+    <section id="inicio" class="night hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Ingeniería en Sistemas Computacionales</p>
+          <h1>David García Vera</h1>
+          <p class="hero-role">Soporte de TI · Administración de endpoints · Ciberseguridad</p>
+          <p class="hero-lead">Estudiante de Ingeniería en Sistemas Computacionales con casi 4 años de experiencia en soporte técnico. Me enfoco en soporte de TI y administración de redes, con proyección hacia infraestructura en la nube y ciberseguridad.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Ver casos de estudio</a>
+            <a class="btn btn-ghost-dark" href="https://www.linkedin.com/in/david-garcia-b967921ab" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside class="id-card" aria-label="Datos generales">
+          <dl>
+            <div><dt>Formación</dt><dd>Ing. en Sistemas Computacionales · Universidad de Montemorelos (2022 – 2027)</dd></div>
+            <div><dt>Experiencia</dt><dd>Becario de Soporte de TI desde 2022 · residencia profesional en Techemet</dd></div>
+            <div><dt>Enfoque</dt><dd>Soporte de TI, redes, nube y ciberseguridad</dd></div>
+            <div><dt>Ubicación</dt><dd>Montemorelos, N.L. · presencial o remoto</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= CIFRAS ================= -->
+    <section class="stats" aria-label="Cifras destacadas">
       <div class="container">
-        <p class="eyebrow">Ingeniería en Sistemas Computacionales · Universidad de Montemorelos</p>
-        <h1>David García Vera</h1>
-        <p class="lead">Soporte técnico de TI y administración de redes, con proyección hacia infraestructura en la nube y ciberseguridad. Experiencia en administración remota de dispositivos, auditoría de datos con Python y gestión de actualizaciones de seguridad en entornos empresariales.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn btn-ghost" href="#contacto">Contacto</a>
+        <div class="stats-grid">
+          <div class="stat"><p class="stat-num">171</p><p class="stat-label">endpoints clasificados en 4 anillos de actualización</p></div>
+          <div class="stat"><p class="stat-num">4,925</p><p class="stat-label">vulnerabilidades analizadas en el diagnóstico de la flota</p></div>
+          <div class="stat"><p class="stat-num">975</p><p class="stat-label">intentos de recolección auditados con Python</p></div>
+          <div class="stat"><p class="stat-num">~4 años</p><p class="stat-label">de experiencia en soporte técnico a usuarios</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ PERFIL ============ -->
-    <section id="perfil" class="section section-alt">
+    <!-- ================= PROPUESTA DE VALOR ================= -->
+    <section id="propuesta" class="section">
       <div class="container">
-        <h2 class="section-title">Perfil</h2>
-        <p class="section-intro">Estudiante de Ingeniería en Sistemas Computacionales con casi 4 años de experiencia práctica en soporte técnico y atención a usuarios en un entorno laboral real. Diagnostico y resuelvo incidentes de hardware, software e impresoras, y capacito y doy seguimiento a usuarios de sistemas administrativos.</p>
+        <div class="section-head">
+          <p class="kicker">Propuesta de valor</p>
+          <h2 class="section-title">Qué aporto a un equipo de TI</h2>
+          <p class="section-lead">Experiencia práctica en entornos empresariales reales, desde la atención al usuario hasta la gestión de vulnerabilidades de una flota completa. Cada área está respaldada por un caso de estudio documentado.</p>
+        </div>
 
-        <div class="profile-grid">
-          <div class="profile-card">
-            <h3>Experiencia</h3>
-            <p class="profile-role">Becario Administrativo / Soporte de TI</p>
-            <p class="profile-meta">Oficina de Becas — Universidad de Montemorelos · Mayo 2022 – presente</p>
-            <ul class="checklist">
-              <li>Soporte de primer nivel a usuarios del sistema administrativo de becas, con seguimiento hasta la resolución.</li>
-              <li>Capacitación presencial y telefónica a estudiantes y personal administrativo.</li>
-              <li>Instalación y reinstalación de Windows; mantenimiento preventivo y correctivo de computadoras e impresoras.</li>
-              <li>Desarrollo de una aplicación pequeña de apoyo a procesos internos de la oficina.</li>
-            </ul>
+        <div class="pillars">
+          <article class="pillar">
+            <span class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3>Ciberseguridad y gestión de parches</h3>
+            <p>Diagnóstico de vulnerabilidades y despliegue de actualizaciones por anillos en Action1, alineado con NIST SP 800-40, CIS Controls v8.1 y CISA KEV.</p>
+            <a class="pillar-link" href="proyectos/gestion-actualizaciones-action1.html">Caso 01 · Action1 →</a>
+          </article>
+          <article class="pillar">
+            <span class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+            <h3>Análisis de datos y QA</h3>
+            <p>Auditoría de datos con Python y pandas para detectar errores de un sistema con IA, con informe y dashboard generados automáticamente con JavaScript.</p>
+            <a class="pillar-link" href="proyectos/auditoria-rutas-ia.html">Caso 02 · Auditoría de rutas →</a>
+          </article>
+          <article class="pillar">
+            <span class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+            <h3>Soporte y administración de endpoints</h3>
+            <p>Soporte de primer nivel, instalación de Windows y control remoto de dispositivos Android y Windows con RustDesk.</p>
+            <a class="pillar-link" href="proyectos/rustdesk-control-remoto.html">Caso 03 · RustDesk →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section id="proyectos" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Casos de estudio</p>
+          <h2 class="section-title">Proyectos documentados</h2>
+          <p class="section-lead">Tres proyectos realizados en empresas. Cada caso incluye rol, contexto y problema, herramientas, evidencia visual o técnica, y resultados.</p>
+        </div>
+
+        <div class="case-list">
+          <a class="case-card" href="proyectos/gestion-actualizaciones-action1.html">
+            <div>
+              <p class="case-index"><span class="num">01</span> Ciberseguridad e infraestructura · Techemet</p>
+              <h3>Gestión de actualizaciones por anillos con Action1</h3>
+              <p class="case-summary">Diagnostiqué el rezago de actualizaciones de una flota Windows multi-sede y diseñé e implementé un despliegue progresivo por anillos, con ventanas nocturnas, pruebas controladas y un reporte semanal de seguimiento.</p>
+              <dl class="case-meta">
+                <div><dt>Rol</dt><dd>Responsable del diagnóstico, diseño e implementación</dd></div>
+                <div><dt>Periodo</dt><dd>Ago – sep 2026</dd></div>
+              </dl>
+              <ul class="tags"><li>Action1</li><li>Update Rings</li><li>NIST SP 800-40</li><li>CIS Controls v8.1</li><li>CISA KEV</li></ul>
+            </div>
+            <div class="case-aside">
+              <div>
+                <p class="case-metric">171</p>
+                <p class="case-metric-label">endpoints clasificados en 4 anillos; 4 automations mensuales encadenadas</p>
+              </div>
+              <span class="case-link">Ver caso de estudio <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="case-card" href="proyectos/auditoria-rutas-ia.html">
+            <div>
+              <p class="case-index"><span class="num">02</span> Análisis de datos y QA · Germinate</p>
+              <h3>Auditoría de una app de rutas generadas con IA</h3>
+              <p class="case-summary">Audité un mes de operación de la app que traza las rutas diarias de 8 compradores. Identifiqué patrones de error, cuantifiqué su impacto económico y entregué un informe y un dashboard con recomendaciones.</p>
+              <dl class="case-meta">
+                <div><dt>Rol</dt><dd>Tester</dd></div>
+                <div><dt>Periodo de datos</dt><dd>25 jul – 25 ago 2026</dd></div>
+              </dl>
+              <ul class="tags"><li>Python</li><li>pandas</li><li>JavaScript</li><li>docx</li><li>pptxgenjs</li></ul>
+            </div>
+            <div class="case-aside">
+              <div>
+                <p class="case-metric">70.7%</p>
+                <p class="case-metric-label">del valor en juego ($1,169,623) ligado a proveedores que nunca se completaron</p>
+              </div>
+              <span class="case-link">Ver caso de estudio <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="case-card" href="proyectos/rustdesk-control-remoto.html">
+            <div>
+              <p class="case-index"><span class="num">03</span> Administración de endpoints · Prácticas profesionales</p>
+              <h3>Implementación de RustDesk para control remoto de dispositivos</h3>
+              <p class="case-summary">Como administrador del proyecto, configuro perfiles con los roles que ofrece RustDesk y asigno a ellos los dispositivos Android y Windows de la empresa, gestionados desde el perfil de administrador.</p>
+              <dl class="case-meta">
+                <div><dt>Rol</dt><dd>Administrador del proyecto · Becario</dd></div>
+                <div><dt>Inicio</dt><dd>Ago 2026 · en curso</dd></div>
+              </dl>
+              <ul class="tags"><li>RustDesk</li><li>Consola web</li><li>Android</li><li>Windows</li></ul>
+            </div>
+            <div class="case-aside">
+              <div>
+                <p class="case-metric">2</p>
+                <p class="case-metric-label">plataformas (Android y Windows) con conectividad remota funcionando</p>
+              </div>
+              <span class="case-link">Ver caso de estudio <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRAYECTORIA ================= -->
+    <section id="trayectoria" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Trayectoria</p>
+          <h2 class="section-title">Experiencia, formación y competencias</h2>
+        </div>
+
+        <div class="career">
+          <div class="stack-col">
+            <div class="panel">
+              <h3>Experiencia</h3>
+              <ol class="timeline">
+                <li>
+                  <p class="tl-title">Residencia profesional · Gestión de actualizaciones</p>
+                  <p class="tl-meta">Techemet · Agosto – septiembre 2026</p>
+                  <ul class="tl-list">
+                    <li>Diagnóstico, diseño e implementación del proceso de <em>patch management</em> con Action1 (caso 01).</li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="tl-title">Becario Administrativo / Soporte de TI</p>
+                  <p class="tl-meta">Oficina de Becas, Universidad de Montemorelos · Mayo 2022 – presente</p>
+                  <ul class="tl-list">
+                    <li>Soporte de primer nivel a usuarios del sistema administrativo de becas, con seguimiento hasta la resolución.</li>
+                    <li>Capacitación presencial y telefónica a estudiantes y personal administrativo.</li>
+                    <li>Instalación y reinstalación de Windows; mantenimiento preventivo y correctivo de equipos e impresoras.</li>
+                    <li>Desarrollo de una aplicación pequeña de apoyo a procesos internos de la oficina.</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+            <div class="panel">
+              <h3>Formación</h3>
+              <ol class="timeline">
+                <li>
+                  <p class="tl-title">Ingeniería en Sistemas Computacionales</p>
+                  <p class="tl-meta">Universidad de Montemorelos · 2022 – 2027 (graduación estimada: mayo 2027)</p>
+                </li>
+              </ol>
+            </div>
           </div>
 
-          <div class="profile-card">
-            <h3>Educación</h3>
-            <p class="profile-role">Ingeniería en Sistemas Computacionales</p>
-            <p class="profile-meta">Universidad de Montemorelos · 2022 – 2027 (graduación estimada: mayo 2027)</p>
-
-            <h3 class="profile-sub">Idiomas</h3>
-            <p>Español nativo · Inglés básico (A1)</p>
-          </div>
-
-          <div class="profile-card">
-            <h3>Competencias técnicas</h3>
-            <ul class="tags">
-              <li>Soporte técnico nivel 1</li>
-              <li>Mesa de servicio</li>
-              <li>Instalación de Windows</li>
-              <li>Impresoras</li>
-              <li>Action1</li>
-              <li>GLPI</li>
-              <li>RustDesk</li>
-              <li>SQL · MySQL</li>
-              <li>Python · pandas</li>
-              <li>HTML · CSS · JavaScript</li>
-              <li>Java · C#</li>
-              <li>Excel</li>
-            </ul>
-
-            <h3 class="profile-sub">Habilidades transversales</h3>
-            <ul class="tags tags-soft">
-              <li>Atención al cliente</li>
-              <li>Trabajo bajo presión</li>
-              <li>Responsabilidad</li>
-              <li>Gestión del tiempo</li>
-              <li>Trabajo en equipo</li>
-            </ul>
+          <div class="panel">
+            <h3>Competencias</h3>
+            <div class="skill-groups">
+              <div class="skill-group">
+                <h4>Soporte e infraestructura</h4>
+                <ul class="tags tags-neutral"><li>Soporte técnico nivel 1</li><li>Mesa de servicio</li><li>Instalación de Windows</li><li>Impresoras</li><li>RustDesk</li><li>GLPI</li></ul>
+              </div>
+              <div class="skill-group">
+                <h4>Seguridad y gestión de parches</h4>
+                <ul class="tags tags-neutral"><li>Action1</li><li>NIST SP 800-40 Rev. 4</li><li>CIS Controls v8.1</li><li>CISA KEV</li></ul>
+              </div>
+              <div class="skill-group">
+                <h4>Datos y desarrollo</h4>
+                <ul class="tags tags-neutral"><li>Python · pandas</li><li>SQL · MySQL</li><li>HTML · CSS · JavaScript</li><li>Java · C#</li><li>Excel</li></ul>
+              </div>
+              <div class="skill-group">
+                <h4>Habilidades transversales</h4>
+                <ul class="tags tags-neutral"><li>Atención al cliente</li><li>Trabajo bajo presión</li><li>Responsabilidad</li><li>Gestión del tiempo</li><li>Trabajo en equipo</li></ul>
+              </div>
+              <div class="skill-group">
+                <h4>Idiomas</h4>
+                <ul class="tags tags-neutral"><li>Español nativo</li><li>Inglés básico (A1)</li></ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ÍNDICE DE PROYECTOS ============ -->
-    <section id="proyectos" class="section">
-      <div class="container">
-        <h2 class="section-title">Proyectos</h2>
-        <p class="section-intro">Cada proyecto documenta título y rol, contexto y problema, herramientas, evidencia y resultados.</p>
-
-        <div class="project-grid">
-          <a class="project-card" href="#rustdesk">
-            <span class="card-num">01</span>
-            <h3>Implementación de RustDesk para control remoto de dispositivos</h3>
-            <p>Configuración de perfiles en RustDesk y asignación de dispositivos Android y Windows de la empresa, administrados desde el perfil de administrador.</p>
-            <ul class="tags">
-              <li>RustDesk</li>
-              <li>Control remoto</li>
-              <li>Administración de dispositivos</li>
-            </ul>
-            <span class="status status-progress">En curso</span>
-          </a>
-
-          <a class="project-card" href="#auditoria-rutas">
-            <span class="card-num">02</span>
-            <h3>Auditoría de la app de rutas con IA — Germinate</h3>
-            <p>Análisis de un mes de datos de la app que traza las rutas diarias de 8 compradores, para detectar errores de la IA y comportamientos inusuales.</p>
-            <ul class="tags">
-              <li>Python · pandas</li>
-              <li>JavaScript</li>
-              <li>Análisis de datos</li>
-            </ul>
-            <span class="status status-done">Entregado</span>
-          </a>
-
-          <a class="project-card" href="#patch-management">
-            <span class="card-num">03</span>
-            <h3>Rediseño de la gestión de actualizaciones de equipos Windows con Action1 — Techemet</h3>
-            <p>Diagnóstico, diseño e implementación de un despliegue de parches por anillos para la flota multi-sede de Techemet, basado en NIST, CIS y CISA KEV.</p>
-            <ul class="tags">
-              <li>Action1</li>
-              <li>Patch management</li>
-              <li>Ciberseguridad</li>
-            </ul>
-            <span class="status status-done">Implementado</span>
-          </a>
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="night contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Conversemos sobre tu equipo de TI</h2>
+          <p>Disponible para modalidad presencial o remota, con disponibilidad para cambio de ciudad.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ PROYECTO 01 · RUSTDESK ============ -->
-    <article id="rustdesk" class="section project">
-      <div class="container">
-        <header class="project-header">
-          <p class="eyebrow">Proyecto 01</p>
-          <h2>Implementación de RustDesk para control remoto de dispositivos</h2>
-          <p class="lead">Implementación de RustDesk en la empresa donde trabajo para controlar de forma remota dispositivos Android y Windows, con perfiles configurados y administrados desde el perfil de administrador.</p>
-
-          <dl class="meta">
-            <div>
-              <dt>Rol</dt>
-              <dd>Administrador del proyecto · Becario (prácticas profesionales)</dd>
-            </div>
-            <div>
-              <dt>Inicio</dt>
-              <dd>Agosto de 2026</dd>
-            </div>
-            <div>
-              <dt>Estado</dt>
-              <dd><span class="status status-progress">En curso</span></dd>
-            </div>
-          </dl>
-        </header>
-
-        <div class="project-body">
-          <section class="block">
-            <h3>Rol y responsabilidad</h3>
-            <p>Como estudiante de ingeniería en prácticas profesionales (becario en la empresa), soy el administrador de este proyecto. Mi responsabilidad fue crear cada perfil con los roles que ofrece la aplicación.</p>
-          </section>
-
-          <section class="block">
-            <h3>Contexto y problema</h3>
-            <p>En la empresa donde trabajo se implementa RustDesk para controlar dispositivos de forma remota. Ya existía otro software de gestión de dispositivos; RustDesk se suma para que lo usen tanto los administradores como otros usuarios con dispositivos de la empresa (Android y Windows).</p>
-          </section>
-
-          <section class="block">
-            <h3>Objetivo</h3>
-            <ul class="checklist">
-              <li>Configurar perfiles en RustDesk.</li>
-              <li>Asignar dispositivos Android y Windows a esos perfiles.</li>
-              <li>Administrar todo correctamente desde el perfil de administrador.</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Herramientas y tecnologías</h3>
-            <ul class="tags">
-              <li>RustDesk</li>
-              <li>Consola web de RustDesk</li>
-              <li>Android</li>
-              <li>Windows</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Estado actual</h3>
-            <ul class="progress-list">
-              <li class="done"><strong>Red y conectividad:</strong> funcionando; los dispositivos se conectan entre sí.</li>
-              <li class="todo"><strong>Configuración:</strong> quedan algunos puntos por afinar.</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Referencias visuales</h3>
-
-            <aside class="reference">
-              <p class="reference-label">Referencia: documentación oficial de RustDesk</p>
-              <p>Por políticas de la empresa no se publican capturas reales de la configuración. Las siguientes imágenes provienen de la <a href="https://rustdesk.com/docs" target="_blank" rel="noopener">documentación oficial de RustDesk</a> y <strong>no corresponden a mi configuración</strong>; ilustran las pantallas de la consola web con las que se trabaja en el proyecto. Toca una imagen para ampliarla.</p>
-
-              <div class="gallery">
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/console-login.png" width="2880" height="1586" loading="lazy" alt="Pantalla de inicio de sesión de la consola web de RustDesk"></button>
-                  <figcaption>Inicio de sesión de la consola web. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/console/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/console-home.png" width="2880" height="1589" loading="lazy" alt="Página principal de la consola web de RustDesk con el menú lateral"></button>
-                  <figcaption>Página principal de la consola con su menú (dispositivos, usuarios, grupos, estrategias). <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/console/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/strategy_menu.png" width="192" height="304" loading="lazy" alt="Menú de opciones de una estrategia en la consola de RustDesk"></button>
-                  <figcaption>Menú de una estrategia: editar dispositivos, usuarios y grupos de dispositivos. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/edit_devices.png" width="1154" height="629" loading="lazy" alt="Diálogo para agregar o quitar dispositivos de una estrategia"></button>
-                  <figcaption>Asignar dispositivos a una estrategia. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/edit_users.png" width="1149" height="439" loading="lazy" alt="Diálogo para asignar usuarios a una estrategia"></button>
-                  <figcaption>Asignar usuarios a una estrategia. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/edit_device_groups.png" width="1154" height="495" loading="lazy" alt="Diálogo para asignar grupos de dispositivos a una estrategia"></button>
-                  <figcaption>Asignar grupos de dispositivos a una estrategia. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/admin-role-create-permission.png" width="961" height="643" loading="lazy" alt="Creación de un rol de administrador seleccionando permisos"></button>
-                  <figcaption>Crear un rol de administrador (Admin Role) y elegir sus permisos. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/admin-role/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-                <figure>
-                  <button class="zoom" type="button"><img src="assets/rustdesk/control-role-create-permission.png" width="640" height="668" loading="lazy" alt="Creación de un rol de control con permisos de sesión remota"></button>
-                  <figcaption>Crear un rol de control (Control Role) con permisos de la sesión remota. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/control-role/" target="_blank" rel="noopener">Fuente</a></figcaption>
-                </figure>
-              </div>
-            </aside>
-          </section>
-        </div>
-
-        <a class="back-link" href="#proyectos">← Volver a proyectos</a>
-      </div>
-    </article>
-
-    <!-- ============ PROYECTO 02 · AUDITORÍA APP DE RUTAS ============ -->
-    <article id="auditoria-rutas" class="section project">
-      <div class="container">
-        <header class="project-header">
-          <p class="eyebrow">Proyecto 02</p>
-          <h2>Auditoría de la app de rutas con IA — Germinate</h2>
-          <p class="lead">Auditoría de los datos de la app que usa IA para trazar cada día las rutas de 8 compradores que visitan proveedores para recolectar material, con el fin de detectar posibles errores de la IA y comportamientos inusuales.</p>
-
-          <dl class="meta">
-            <div>
-              <dt>Rol</dt>
-              <dd>Tester</dd>
-            </div>
-            <div>
-              <dt>Periodo de datos</dt>
-              <dd>25-jul-2026 a 25-ago-2026</dd>
-            </div>
-            <div>
-              <dt>Estado</dt>
-              <dd><span class="status status-done">Entregado</span></dd>
-            </div>
-          </dl>
-        </header>
-
-        <div class="project-body">
-          <section class="block">
-            <h3>Rol y responsabilidad</h3>
-            <p>Mi rol fue de <strong>tester</strong>: revisar diariamente la app para detectar si existía algún problema o comportamiento inusual en las rutas generadas.</p>
-          </section>
-
-          <section class="block">
-            <h3>Contexto y objetivo</h3>
-            <p>En Germinate, una app con IA traza cada día las rutas de 8 compradores que visitan proveedores para recolectar material. Mi jefe me pidió <strong>auditar posibles errores de la IA y comportamientos inusuales</strong> en esas rutas.</p>
-            <p class="note">Por confidencialidad, los compradores y proveedores aparecen anonimizados (Comprador A, Proveedor 1, etc.).</p>
-          </section>
-
-          <section class="block">
-            <h3>Metodología y herramientas</h3>
-            <p><strong>Fuentes de datos</strong></p>
-            <ul class="checklist">
-              <li>Reportes descargados de la plataforma: <em>Pickups</em> (975 intentos de recolección), <em>Reassigned Stops</em>, <em>Breakdowns</em> y <em>Added Stops</em>.</li>
-              <li>CSV de compras de un comprador: 350 folios de enero a agosto de 2026.</li>
-              <li>Capturas diarias de rutas.</li>
-            </ul>
-            <p><strong>Proceso</strong></p>
-            <ul class="checklist">
-              <li>Análisis de los CSV con Python/pandas: agrupación por comprador y por proveedor, tasa de completado y recurrencia de proveedores por día.</li>
-              <li>Búsqueda en las notas de falla (<em>Fail Note</em>) de frases como “atiende”, “vende a”, “le compra” o “le vende” para identificar conflictos de comprador asignado.</li>
-              <li>Generación automática del informe en Word y de un dashboard en PowerPoint estilo Power BI con JavaScript.</li>
-              <li>Organización de la evidencia en Google Drive.</li>
-            </ul>
-            <ul class="tags">
-              <li>Python</li>
-              <li>pandas</li>
-              <li>JavaScript</li>
-              <li>docx</li>
-              <li>pptxgenjs</li>
-              <li>Google Drive</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Hallazgos</h3>
-            <div class="findings">
-              <div class="finding">
-                <p class="finding-num">$37,620</p>
-                <h4>Ruta repetida</h4>
-                <p>Un comprador tenía un núcleo de 9 proveedores que aparecía en el 100% de los días con captura completa. Los 9 tuvieron <strong>0% de recolecciones completadas</strong> en el mes, casi siempre por dirección incorrecta o problemas de acceso. Valor de esos 9 proveedores, contado una sola vez cada uno: $37,620.</p>
-              </div>
-              <div class="finding">
-                <p class="finding-num">43 intentos</p>
-                <h4>Preferred buyer</h4>
-                <p>43 intentos en el mes donde el proveedor dijo que lo atiende otro comprador: 18 proveedores únicos ($89,409). Solo hubo 2 reasignaciones manuales en el mes, y eran el mismo movimiento revertido un minuto después.</p>
-              </div>
-              <div class="finding">
-                <p class="finding-num">53 proveedores</p>
-                <h4>Sin retroalimentación</h4>
-                <p>El valor estimado (<em>Price</em>) de cada proveedor nunca cambió entre visitas: se revisaron 53 proveedores con varias visitas y al menos una completada. No hay evidencia de retroalimentación en el sistema.</p>
-              </div>
-              <div class="finding">
-                <p class="finding-num">70.7%</p>
-                <h4>Impacto económico</h4>
-                <p>377 proveedores únicos con un valor de $1,655,512. El 70.7% ($1,169,623) corresponde a proveedores que nunca se completaron en el mes.</p>
-              </div>
-              <div class="finding">
-                <p class="finding-num">2.30 vs 2.13</p>
-                <h4>Patrón previo a la app</h4>
-                <p>El patrón de pocas visitas diarias de otro comprador ya existía antes de la app (2.30 proveedores/día sin app vs 2.13 con app), así que no es un error del sistema.</p>
-              </div>
-              <div class="finding">
-                <p class="finding-num">4.4% – 55.3%</p>
-                <h4>Tasa de completado</h4>
-                <p>La tasa de completado por comprador va desde 4.4% hasta 55.3%.</p>
-              </div>
-            </div>
-
-            <figure class="chart">
-              <figcaption class="chart-title">Tasa de completado por comprador (%)</figcaption>
-              <div class="bars" role="list">
-                <div class="bar-row" role="listitem" data-tip="Comprador A: 55.3%"><span class="bar-label">Comprador A</span><span class="bar-track"><span class="bar" style="--v:55.3"></span></span><span class="bar-value">55.3%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador B: 49.2%"><span class="bar-label">Comprador B</span><span class="bar-track"><span class="bar" style="--v:49.2"></span></span><span class="bar-value">49.2%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador C: 19.3%"><span class="bar-label">Comprador C</span><span class="bar-track"><span class="bar" style="--v:19.3"></span></span><span class="bar-value">19.3%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador D: 11.9%"><span class="bar-label">Comprador D</span><span class="bar-track"><span class="bar" style="--v:11.9"></span></span><span class="bar-value">11.9%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador E: 10.5%"><span class="bar-label">Comprador E</span><span class="bar-track"><span class="bar" style="--v:10.5"></span></span><span class="bar-value">10.5%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador F: 10.0%"><span class="bar-label">Comprador F</span><span class="bar-track"><span class="bar" style="--v:10.0"></span></span><span class="bar-value">10.0%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador G: 7.0%"><span class="bar-label">Comprador G</span><span class="bar-track"><span class="bar" style="--v:7.0"></span></span><span class="bar-value">7.0%</span></div>
-                <div class="bar-row" role="listitem" data-tip="Comprador H (ruta repetida): 4.4%"><span class="bar-label">Comprador H <small>ruta repetida</small></span><span class="bar-track"><span class="bar" style="--v:4.4"></span></span><span class="bar-value">4.4%</span></div>
-              </div>
-              <p class="chart-source">Fuente: Pickups Report, 25-jul a 25-ago-2026 (975 intentos).</p>
-            </figure>
-
-            <figure class="chart">
-              <figcaption class="chart-title">Valor de los 377 proveedores únicos ($1,655,512)</figcaption>
-              <div class="stack" role="img" aria-label="70.7% del valor ($1,169,623) en proveedores nunca completados; 29.3% ($485,889) en proveedores completados alguna vez">
-                <span class="stack-seg seg-main" style="flex-basis:70.7%" data-tip="Nunca completados: $1,169,623 (70.7%)">70.7%</span>
-                <span class="stack-seg seg-alt" style="flex-basis:29.3%" data-tip="Completados alguna vez: $485,889 (29.3%)">29.3%</span>
-              </div>
-              <ul class="legend">
-                <li><span class="swatch seg-main"></span>Nunca completados en el mes · 308 proveedores · $1,169,623</li>
-                <li><span class="swatch seg-alt"></span>Completados alguna vez · 69 proveedores · $485,889</li>
-              </ul>
-              <p class="chart-source">Fuente: Pickups Report; cada proveedor contado una sola vez.</p>
-            </figure>
-          </section>
-
-          <section class="block">
-            <h3>Corrección de cálculo y aprendizajes</h3>
-            <p>Detecté y corregí un error de cálculo: al principio se sumaban las visitas repetidas al mismo proveedor, lo que <strong>inflaba los montos casi 3 veces</strong>. Al recalcular contando cada proveedor una sola vez, el porcentaje de valor no completado se mantuvo alrededor del 70%.</p>
-            <div class="compare">
-              <div><p class="compare-label">Antes (sumando cada intento)</p><p class="compare-num strike">$5,059,751</p></div>
-              <div><p class="compare-label">Después (cada proveedor una vez)</p><p class="compare-num">$1,655,512</p></div>
-            </div>
-            <p>Fragmento del script de verificación final (Python/pandas):</p>
-<pre class="code"><code>resumen = df.groupby('Seller ID').agg(Price=('Price','first'), completadas=('Pickup Status', lambda s:(s=='completed').sum()))
-nunca = resumen[resumen['completadas']==0]
-print(f"% del valor que nunca se cobro: {nunca['Price'].sum()/resumen['Price'].sum()*100:.1f}%")</code></pre>
-          </section>
-
-          <section class="block">
-            <h3>Recomendaciones entregadas</h3>
-            <ul class="checklist">
-              <li>Que el sistema baje la prioridad o retire a los proveedores con historial de fallo repetido, en vez de reagendarlos indefinidamente al mismo valor.</li>
-              <li>Revisar por qué el algoritmo no da prioridad al <em>preferred buyer</em> (comprador asignado).</li>
-              <li>Retirar de las rutas activas a los proveedores que ya confirmaron vender a la competencia.</li>
-              <li>Revisar la causa de la baja tasa de completado del comprador con la ruta repetida: las notas apuntan a la calidad de las direcciones más que a la lógica de ruteo.</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Entregables y capturas</h3>
-            <div class="deliverables">
-              <div class="deliverable">
-                <h4>Informe de auditoría</h4>
-                <p>Documento Word de 2 páginas generado con JavaScript (docx).</p>
-              </div>
-              <div class="deliverable">
-                <h4>Respaldo metodológico</h4>
-                <p>Fuentes de datos, filtros exactos usados y precisiones del análisis.</p>
-              </div>
-              <div class="deliverable">
-                <h4>Dashboard estilo Power BI</h4>
-                <p>Presentación PowerPoint de 6 diapositivas generada con JavaScript (pptxgenjs).</p>
-              </div>
-            </div>
-
-            <p>Capturas de lo revisado, recortadas y con los nombres reales sustituidos. Toca una imagen para ampliarla.</p>
-            <div class="gallery">
-              <figure>
-                <button class="zoom" type="button"><img src="assets/rutas/ruta-18-ago-anonimizada.png" width="620" height="635" loading="lazy" alt="Lista de stops de la ruta del Comprador H del 18 de agosto de 2026, con los proveedores anonimizados; los 9 proveedores del núcleo fijo aparecen en la ruta"></button>
-                <figcaption>Ruta del Comprador H, 18-ago-2026 (13 stops). Los 9 proveedores del núcleo fijo aparecen en la ruta del día. Captura recortada, sin mapa y con nombres sustituidos.</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom" type="button"><img src="assets/rutas/ruta-25-ago-anonimizada.png" width="425" height="725" loading="lazy" alt="Lista de stops de la ruta del Comprador H del 25 de agosto de 2026, con los proveedores anonimizados; vuelven a aparecer los 9 proveedores del núcleo fijo"></button>
-                <figcaption>Ruta del Comprador H, 25-ago-2026 (15 stops). Vuelven a aparecer los 9 proveedores del núcleo fijo (misma numeración que el 18-ago). Captura recortada, sin mapa y con nombres sustituidos.</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom" type="button"><img src="assets/rutas/reportes-plataforma.png" width="1885" height="305" loading="lazy" alt="Pantalla Report Downloads de la plataforma con los reportes Accidents, Breakdowns, Pickups, Reassigned Stops y Added Stops, rango 25-jul-26 a 25-ago-26"></button>
-                <figcaption>Reportes descargables de la plataforma usados en el análisis (rango 25-jul a 25-ago-2026).</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom" type="button"><img src="assets/rutas/dashboard-panorama.png" width="1467" height="825" loading="lazy" alt="Diapositiva Panorama general del dashboard: 975 stops, 18.6% de tasa de completado promedio, 43 conflictos de preferred buyer, 0 descomposturas y tasa de completado por comprador"></button>
-                <figcaption>Diapositiva del dashboard generado con pptxgenjs; nombres anonimizados.</figcaption>
-              </figure>
-            </div>
-          </section>
-        </div>
-
-        <a class="back-link" href="#proyectos">← Volver a proyectos</a>
-      </div>
-    </article>
-
-    <!-- ============ PROYECTO 03 · PATCH MANAGEMENT CON ACTION1 ============ -->
-    <article id="patch-management" class="section project">
-      <div class="container">
-        <header class="project-header">
-          <p class="eyebrow">Proyecto 03</p>
-          <h2>Rediseño de la gestión de actualizaciones de equipos Windows con Action1 — Techemet</h2>
-          <p class="lead">Diagnóstico, diseño e implementación de un proceso de <em>patch management</em> por anillos de despliegue para la flota de equipos Windows de Techemet, empresa con operación multi-sede en México (matriz y sucursales).</p>
-
-          <dl class="meta">
-            <div>
-              <dt>Rol</dt>
-              <dd>Responsable del diagnóstico, diseño e implementación</dd>
-            </div>
-            <div>
-              <dt>Periodo</dt>
-              <dd>Agosto a septiembre de 2026</dd>
-            </div>
-            <div>
-              <dt>Estado</dt>
-              <dd><span class="status status-done">Implementado</span></dd>
-            </div>
-          </dl>
-        </header>
-
-        <div class="project-body">
-          <section class="block">
-            <h3>Rol y responsabilidad</h3>
-            <p>En el marco de mi residencia profesional, fui responsable de diagnosticar, diseñar e implementar el proceso de actualizaciones, reportando a mi jefe de TI, quien aprobaba las decisiones.</p>
-            <p>La parte central de mi propuesta fue <strong>clasificar qué equipos de cada área debían asignarse a cada anillo</strong>, dividiendo los departamentos entre distintos anillos para que, si una actualización fallaba, no se afectara por completo la operación de ningún área crítica del negocio.</p>
-          </section>
-
-          <section class="block">
-            <h3>Problema</h3>
-            <p>Los equipos Windows de Techemet se administraban con Action1, pero el rezago de actualizaciones era alto y no existía un proceso que garantizara que los parches se aplicaran de forma continua, ordenada y medible. El objetivo fue rediseñar la gestión de actualizaciones con base en buenas prácticas reconocidas.</p>
-            <ul class="tags">
-              <li>NIST SP 800-40 Rev. 4</li>
-              <li>CIS Controls v8.1 · Control 7</li>
-              <li>CISA KEV</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Diagnóstico inicial <small class="muted">· 14 de agosto de 2026</small></h3>
-            <div class="kpis">
-              <div class="kpi"><p class="kpi-num">167</p><p class="kpi-label">endpoints administrados</p></div>
-              <div class="kpi"><p class="kpi-num">4,925</p><p class="kpi-label">vulnerabilidades detectadas</p></div>
-              <div class="kpi"><p class="kpi-num">4,340</p><p class="kpi-label">vencidas según el SLA</p></div>
-              <div class="kpi"><p class="kpi-num">43</p><p class="kpi-label">equipos con más de 31 días sin conectarse (~26% de la flota)</p></div>
-              <div class="kpi"><p class="kpi-num">11</p><p class="kpi-label">equipos con reinicio pendiente</p></div>
-              <div class="kpi"><p class="kpi-num">7</p><p class="kpi-label">vulnerabilidades CISA KEV vencidas desde hacía meses</p></div>
-            </div>
-            <ul class="checklist">
-              <li><strong>Causa raíz del rezago:</strong> solo había 4 <em>automations</em>; la única que desplegó algo corrió una sola vez (23 de julio de 2026) y nunca más.</li>
-              <li>Los grupos existentes no tenían lógica funcional, y 3 servidores críticos (entre ellos nómina y contabilidad) estaban mezclados con PCs de usuarios.</li>
-              <li>No había reportes programados ni roles de acceso claros.</li>
-              <li>Las 7 vulnerabilidades con explotación activa confirmada (CISA KEV) llevaban meses vencidas; los navegadores eran el patrón dominante.</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Solución: despliegue progresivo por anillos</h3>
-            <p>Se diseñó un despliegue por anillos (<em>Update Rings</em>) encadenados con la opción <em>“From previous (inner) update ring”</em>: <strong>una actualización solo avanza si tuvo éxito en el anillo anterior</strong>.</p>
-
-            <figure class="rings" aria-label="Diagrama del flujo de actualizaciones por anillos">
-              <div class="ring-step ring-start">
-                <p class="ring-name">Patch Tuesday</p>
-                <p class="ring-when">2.º martes del mes</p>
-              </div>
-              <span class="ring-arrow" aria-hidden="true"></span>
-              <div class="ring-step">
-                <p class="ring-name">Ring 0</p>
-                <p class="ring-who">3 equipos de Sistemas</p>
-                <p class="ring-when">2.º miércoles</p>
-              </div>
-              <span class="ring-arrow" aria-hidden="true"></span>
-              <div class="ring-step">
-                <p class="ring-name">Ring 1</p>
-                <p class="ring-who">10 equipos piloto</p>
-                <p class="ring-when">3.er martes</p>
-              </div>
-              <span class="ring-arrow" aria-hidden="true"></span>
-              <div class="ring-step">
-                <p class="ring-name">Ring 2</p>
-                <p class="ring-who">23 equipos de gerentes y jefes de área</p>
-                <p class="ring-when">3.er viernes, 12:00 a.m.</p>
-              </div>
-              <span class="ring-arrow" aria-hidden="true"></span>
-              <div class="ring-step">
-                <p class="ring-name">Ring 3</p>
-                <p class="ring-who">Resto de la flota</p>
-                <p class="ring-when">4.º martes</p>
-              </div>
-              <figcaption>Cada anillo recibe la actualización solo si tuvo éxito en el anillo anterior. Ventana nocturna de 6 horas, fuera del horario laboral.</figcaption>
-            </figure>
-
-            <ul class="checklist">
-              <li>Servidores con actualización manual y equipos especiales excluidos del despliegue automático.</li>
-              <li>Evaluación del SLA de Action1 (7/15/30/60 días), con la propuesta de una categoría acelerada para vulnerabilidades CISA KEV.</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Implementación</h3>
-            <p>Se clasificaron <strong>171 endpoints en 4 anillos</strong>, importados a Action1 por CSV.</p>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr><th scope="col">Anillo</th><th scope="col">Equipos</th><th scope="col">Calendario</th><th scope="col">Condición</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Ring 0</td><td>3 equipos de Sistemas</td><td>2.º miércoles, 12:30 a.m. (un día después del Patch Tuesday)</td><td>—</td></tr>
-                  <tr><td>Ring 1</td><td>10 equipos piloto</td><td>3.er martes, 12:30 a.m.</td><td>Despliega lo que lleva 6 días en Ring 0 con ≥70% de éxito</td></tr>
-                  <tr><td>Ring 2</td><td>23 equipos de gerentes y jefes de área</td><td>3.er viernes, 12:00 a.m.</td><td>Éxito en el anillo anterior</td></tr>
-                  <tr><td>Ring 3</td><td>Resto de la flota</td><td>4.º martes, 12:00 a.m.</td><td>Éxito en el anillo anterior</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <ul class="checklist">
-              <li><strong>Ventana de actualización nocturna</strong> de 6 horas (<em>completion deadline</em>) que inicia a las 12:00 o 12:30 a.m. según el anillo, fuera del horario laboral.</li>
-              <li><strong>Pruebas manuales</strong> el 19 y 20 de agosto, con reporte de evidencias por equipo.</li>
-              <li><strong>“Reporte Semanal”</strong> personalizado que excluye el grupo <em>Stop</em> (equipos fuera de servicio) para medir solo los 125 equipos activos. Se creó desde cero porque clonar el reporte nativo no permitía filtrar por grupo.</li>
-              <li><strong>Excel semanal con KPIs</strong> a partir del reporte.</li>
-              <li><strong>Automation de apagado programado</strong> los viernes mediante <em>Run Script</em>:</li>
-            </ul>
-<pre class="code"><code>shutdown /s /t 60</code></pre>
-
-            <p>Configuración real en la consola de Action1 (sin datos de equipos ni usuarios). Toca una imagen para ampliarla.</p>
-            <div class="gallery">
-              <figure>
-                <button class="zoom" type="button"><img src="assets/action1/lista-automations.png" width="1432" height="214" loading="lazy" alt="Lista de automations Update Ring 0 a Update Ring 3 en Action1 con su calendario mensual"></button>
-                <figcaption>Las 4 automations de los anillos: 2.º miércoles, 3.er martes, 3.er viernes y 4.º martes de cada mes, cada una encadenada a la anterior.</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom" type="button"><img src="assets/action1/ring1-update-ring.png" width="1123" height="886" loading="lazy" alt="Paso Update Ring de Ring 1: From previous (inner) update ring con Update Ring 0, deploy after 6 days con éxito mínimo de 70 por ciento"></button>
-                <figcaption>Ring 1: “From previous (inner) update ring” con Ring 0 como anillo interno, despliegue tras 6 días con ≥70% de éxito y retraso de 1 día desde la publicación.</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom" type="button"><img src="assets/action1/ring0-endpoints.png" width="1074" height="255" loading="lazy" alt="Paso Select Endpoints de Ring 0 con el grupo de endpoints Ring 0"></button>
-                <figcaption>Ring 0 se ejecuta sobre el grupo de endpoints “Ring 0”.</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom" type="button"><img src="assets/action1/ring0-schedule.png" width="1080" height="520" loading="lazy" alt="Paso Schedule de Ring 0: mensual, segundo miércoles a las 12:30 a.m., plazo de finalización de 6 horas"></button>
-                <figcaption>Programación de Ring 0: mensual, 2.º miércoles a las 12:30 a.m., con plazo de finalización de 6 horas.</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section class="block">
-            <h3>Resultados</h3>
-            <ul class="progress-list">
-              <li class="done">En lugar de una sola <em>automation</em> que corrió una vez, quedó configurado un ciclo mensual de 4 anillos encadenados.</li>
-              <li class="done">171 endpoints clasificados en anillos, con servidores y equipos especiales fuera del despliegue automático.</li>
-              <li class="done">Medición semanal enfocada en los 125 equipos activos. Primer KPI: Google Chrome estaba pendiente en el 95% de los equipos activos.</li>
-              <li class="done">Pruebas del 19 y 20 de agosto documentadas por equipo, que revelaron problemas operativos antes del despliegue general.</li>
-            </ul>
-            <p class="note">Al cierre de este documento no se ha medido todavía la reducción de vulnerabilidades tras un ciclo completo de anillos.</p>
-          </section>
-
-          <section class="block">
-            <h3>Aprendizajes</h3>
-            <ul class="checklist">
-              <li><strong>La causa raíz era de proceso, no de herramienta:</strong> el rezago venía de una <em>automation</em> que solo corrió una vez, no de falta de capacidades en Action1.</li>
-              <li><strong>Las pruebas manuales revelan lo que la consola no:</strong> equipos apagados durante la ventana, un conflicto de versión del cliente VPN, Office instalado por MSI en lugar de Click-To-Run y equipos con rezago extremo.</li>
-              <li><strong>Medir solo lo que importa:</strong> el reporte nativo no permitía filtrar por grupo, así que hubo que construir uno desde cero para excluir los equipos fuera de servicio.</li>
-              <li><strong>Mejora identificada:</strong> falta un periodo de observación entre anillos para detectar fallas tardías; se confirmó que Action1 permite desinstalar actualizaciones de Windows por equipo como plan de reversión.</li>
-            </ul>
-          </section>
-
-          <section class="block">
-            <h3>Documentación elaborada</h3>
-            <div class="deliverables">
-              <div class="deliverable">
-                <h4>Documento de diagnóstico</h4>
-                <p>Estado inicial de la flota y causa raíz del rezago de actualizaciones.</p>
-              </div>
-              <div class="deliverable">
-                <h4>Propuesta de diseño</h4>
-                <p>Anillos de despliegue, exclusiones y evaluación del SLA.</p>
-              </div>
-              <div class="deliverable">
-                <h4>Configuración de Rings y reporte</h4>
-                <p>Parámetros de cada anillo y del “Reporte Semanal”.</p>
-              </div>
-              <div class="deliverable">
-                <h4>Script de generación de CSV</h4>
-                <p>Clasificación de los endpoints para importarlos a Action1.</p>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <a class="back-link" href="#proyectos">← Volver a proyectos</a>
-      </div>
-    </article>
-
-    <!-- ============ CONTACTO ============ -->
-    <section id="contacto" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Contacto</h2>
-        <p class="section-intro">Disponible para modalidad presencial o remota, con disponibilidad para cambio de ciudad.</p>
-        <ul class="contact-list">
-          <li><span class="contact-label">Correo</span><a href="mailto:davidgv109@gmail.com">davidgv109@gmail.com</a></li>
-          <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/david-garcia-b967921ab" target="_blank" rel="noopener">linkedin.com/in/david-garcia-b967921ab</a></li>
-          <li><span class="contact-label">Ubicación</span>Montemorelos, N.L., México</li>
+        <ul class="contact-links">
+          <li>
+            <a href="mailto:davidgv109@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <span><small>Correo</small><strong>davidgv109@gmail.com</strong></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/david-garcia-b967921ab" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+              <span><small>LinkedIn</small><strong>linkedin.com/in/david-garcia-b967921ab</strong></span>
+            </a>
+          </li>
+          <li>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><small>Ubicación</small><strong>Montemorelos, N.L., México</strong></span>
+            </span>
+          </li>
         </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>David García Vera · Ingeniería en Sistemas Computacionales · Universidad de Montemorelos</p>
+    <div class="container footer-inner">
+      <p>© 2026 David García Vera</p>
+      <p>Ingeniería en Sistemas Computacionales · Universidad de Montemorelos</p>
     </div>
   </footer>
 
-  <dialog class="lightbox" aria-label="Imagen ampliada">
-    <button class="lightbox-close" type="button" aria-label="Cerrar">×</button>
-    <img alt="">
-    <p class="lightbox-caption"></p>
-  </dialog>
+  <a class="to-top" href="#inicio" aria-label="Volver arriba">↑</a>
 
   <script src="script.js"></script>
 </body>

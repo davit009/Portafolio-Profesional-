@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditoría de una app de rutas con IA · David García Vera</title>
+  <meta name="description" content="Caso de estudio: auditoría con Python y pandas de un mes de rutas generadas con IA para 8 compradores de Germinate, con hallazgos cuantificados, informe y dashboard.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">DG</span><span class="brand-name">David García Vera</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" class="nav" aria-label="Principal">
+        <a href="../index.html#propuesta">Perfil</a>
+        <a class="active" href="../index.html#proyectos" aria-current="page">Proyectos</a>
+        <a href="../index.html#trayectoria">Trayectoria</a>
+        <a class="nav-cta" href="../index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="night case-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../index.html#proyectos">Proyectos</a><span aria-hidden="true">/</span>Caso 02</nav>
+        <p class="eyebrow">Caso de estudio 02 · Análisis de datos y QA</p>
+        <h1>Auditoría de una app de rutas generadas con IA</h1>
+        <p class="lead">Auditoría de un mes de operación de la app con la que Germinate traza, mediante IA, las rutas diarias de 8 compradores que visitan proveedores para recolectar material. El objetivo: detectar errores de la IA y comportamientos inusuales, y medir su impacto.</p>
+
+        <dl class="facts">
+          <div><dt>Organización</dt><dd>Germinate</dd></div>
+          <div><dt>Rol</dt><dd>Tester · revisión diaria de la app</dd></div>
+          <div><dt>Periodo de datos</dt><dd>25 jul – 25 ago 2026</dd></div>
+          <div><dt>Estado</dt><dd><span class="status status-done">Entregado</span></dd></div>
+        </dl>
+        <ul class="tags"><li>Python</li><li>pandas</li><li>JavaScript</li><li>docx</li><li>pptxgenjs</li><li>Google Drive</li></ul>
+      </div>
+    </section>
+
+    <div class="container case-layout">
+      <nav class="toc" aria-label="Contenido del caso" data-spy>
+        <p class="toc-title">En este caso</p>
+        <ol>
+          <li><a href="#contexto">Contexto y problema</a></li>
+          <li><a href="#rol">Rol</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#resultados">Resultados e impacto</a></li>
+          <li><a href="#evidencia">Evidencia</a></li>
+          <li><a href="#aprendizajes">Aprendizajes</a></li>
+        </ol>
+      </nav>
+
+      <article class="case-content">
+        <section id="contexto" class="case-section">
+          <h2><span class="sec-num">01</span>Contexto y problema</h2>
+          <div class="prose">
+            <p>Germinate utiliza una app con IA que traza cada día las rutas de 8 compradores que visitan proveedores para recolectar material. Mi jefe me encargó <strong>auditar posibles errores de la IA y comportamientos inusuales</strong> en esas rutas, con datos del 25 de julio al 25 de agosto de 2026.</p>
+          </div>
+          <div class="callout">
+            <p class="callout-label">Confidencialidad</p>
+            <p>Los compradores y proveedores aparecen anonimizados (Comprador A, Proveedor 1, etc.) y no se publican datos de contacto.</p>
+          </div>
+        </section>
+
+        <section id="rol" class="case-section">
+          <h2><span class="sec-num">02</span>Rol y responsabilidades</h2>
+          <div class="prose">
+            <p>Mi rol fue de <strong>tester</strong>: revisar diariamente la app para detectar si existía algún problema o comportamiento inusual en las rutas generadas.</p>
+          </div>
+          <ul class="bullets">
+            <li>Revisión y captura diaria de las rutas generadas.</li>
+            <li>Descarga de los reportes de la plataforma para el periodo auditado.</li>
+            <li>Análisis de los datos con Python y pandas.</li>
+            <li>Generación automática del informe y del dashboard con JavaScript.</li>
+            <li>Organización de la evidencia en Google Drive.</li>
+          </ul>
+        </section>
+
+        <section id="herramientas" class="case-section">
+          <h2><span class="sec-num">03</span>Herramientas y tecnologías</h2>
+          <div class="tool-groups">
+            <div class="tool-group">
+              <h3>Análisis</h3>
+              <ul class="tags tags-neutral"><li>Python</li><li>pandas</li></ul>
+            </div>
+            <div class="tool-group">
+              <h3>Entregables</h3>
+              <ul class="tags tags-neutral"><li>JavaScript</li><li>docx (Word)</li><li>pptxgenjs (PowerPoint)</li></ul>
+            </div>
+            <div class="tool-group">
+              <h3>Organización</h3>
+              <ul class="tags tags-neutral"><li>Google Drive</li></ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="metodologia" class="case-section">
+          <h2><span class="sec-num">04</span>Metodología</h2>
+
+          <figure class="flow" aria-label="Diagrama del proceso de auditoría">
+            <div class="flow-step muted"><p class="flow-name">Fuentes</p><p class="flow-who">4 reportes de la plataforma, CSV de compras y capturas diarias</p></div>
+            <span class="flow-arrow" aria-hidden="true"></span>
+            <div class="flow-step"><p class="flow-name">Procesamiento</p><p class="flow-who">Python y pandas</p></div>
+            <span class="flow-arrow" aria-hidden="true"></span>
+            <div class="flow-step"><p class="flow-name">Hallazgos</p><p class="flow-who">Patrones de error cuantificados</p></div>
+            <span class="flow-arrow" aria-hidden="true"></span>
+            <div class="flow-step"><p class="flow-name">Entregables</p><p class="flow-who">Informe Word y dashboard PowerPoint</p></div>
+            <figcaption>Flujo de trabajo de la auditoría.</figcaption>
+          </figure>
+
+          <h3>Fuentes de datos</h3>
+          <ul class="bullets">
+            <li>Reportes de la plataforma: <em>Pickups</em> (975 intentos de recolección), <em>Reassigned Stops</em>, <em>Breakdowns</em> y <em>Added Stops</em>.</li>
+            <li>CSV de compras de un comprador: 350 folios de enero a agosto de 2026.</li>
+            <li>Capturas diarias de rutas.</li>
+          </ul>
+
+          <h3>Análisis</h3>
+          <ul class="bullets">
+            <li>Agrupación por comprador y por proveedor para calcular la tasa de completado y la recurrencia de proveedores por día.</li>
+            <li>Búsqueda en las notas de falla (<em>Fail Note</em>) de frases como “atiende”, “vende a”, “le compra” o “le vende” para identificar conflictos de comprador asignado.</li>
+            <li>Comparación del valor estimado (<em>Price</em>) de cada proveedor entre visitas.</li>
+            <li>Comparación de visitas diarias de un comprador antes y después de la app, con el CSV de compras.</li>
+          </ul>
+        </section>
+
+        <section id="resultados" class="case-section">
+          <h2><span class="sec-num">05</span>Resultados e impacto</h2>
+          <div class="findings">
+            <div class="finding">
+              <p class="finding-num">$37,620</p>
+              <h3>Ruta repetida sin resultados</h3>
+              <p>Un comprador tenía un núcleo de 9 proveedores presente en el 100% de los días con captura completa. Los 9 tuvieron 0% de recolecciones completadas en el mes, casi siempre por dirección incorrecta o problemas de acceso.</p>
+            </div>
+            <div class="finding">
+              <p class="finding-num">43 intentos</p>
+              <h3>Preferred buyer sin corregir</h3>
+              <p>43 intentos en los que el proveedor dijo que lo atiende otro comprador: 18 proveedores únicos ($89,409). Solo hubo 2 reasignaciones manuales, y eran el mismo movimiento revertido un minuto después.</p>
+            </div>
+            <div class="finding">
+              <p class="finding-num">53 proveedores</p>
+              <h3>Sin retroalimentación</h3>
+              <p>El valor estimado (<em>Price</em>) nunca cambió entre visitas en 53 proveedores con varias visitas y al menos una completada. No hay evidencia de retroalimentación en el sistema.</p>
+            </div>
+            <div class="finding">
+              <p class="finding-num">70.7%</p>
+              <h3>Impacto económico</h3>
+              <p>377 proveedores únicos con un valor de $1,655,512. El 70.7% ($1,169,623) corresponde a proveedores que nunca se completaron en el mes.</p>
+            </div>
+            <div class="finding">
+              <p class="finding-num">2.30 vs 2.13</p>
+              <h3>Patrón previo a la app</h3>
+              <p>Las pocas visitas diarias de otro comprador ya existían antes de la app (2.30 proveedores/día sin app vs 2.13 con app): no es un error del sistema.</p>
+            </div>
+            <div class="finding">
+              <p class="finding-num">4.4% – 55.3%</p>
+              <h3>Tasa de completado</h3>
+              <p>Rango de la tasa de completado entre los 8 compradores en el mes auditado.</p>
+            </div>
+          </div>
+
+          <figure class="chart">
+            <figcaption class="chart-title">Tasa de completado por comprador (%)</figcaption>
+            <div class="bars" role="list">
+              <div class="bar-row" role="listitem" data-tip="Comprador A: 55.3%"><span class="bar-label">Comprador A</span><span class="bar-track"><span class="bar" style="--v:55.3"></span></span><span class="bar-value">55.3%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador B: 49.2%"><span class="bar-label">Comprador B</span><span class="bar-track"><span class="bar" style="--v:49.2"></span></span><span class="bar-value">49.2%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador C: 19.3%"><span class="bar-label">Comprador C</span><span class="bar-track"><span class="bar" style="--v:19.3"></span></span><span class="bar-value">19.3%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador D: 11.9%"><span class="bar-label">Comprador D</span><span class="bar-track"><span class="bar" style="--v:11.9"></span></span><span class="bar-value">11.9%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador E: 10.5%"><span class="bar-label">Comprador E</span><span class="bar-track"><span class="bar" style="--v:10.5"></span></span><span class="bar-value">10.5%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador F: 10.0%"><span class="bar-label">Comprador F</span><span class="bar-track"><span class="bar" style="--v:10.0"></span></span><span class="bar-value">10.0%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador G: 7.0%"><span class="bar-label">Comprador G</span><span class="bar-track"><span class="bar" style="--v:7.0"></span></span><span class="bar-value">7.0%</span></div>
+              <div class="bar-row" role="listitem" data-tip="Comprador H (ruta repetida): 4.4%"><span class="bar-label">Comprador H <small>ruta repetida</small></span><span class="bar-track"><span class="bar" style="--v:4.4"></span></span><span class="bar-value">4.4%</span></div>
+            </div>
+            <p class="chart-source">Fuente: Pickups Report, 25-jul a 25-ago-2026 (975 intentos).</p>
+          </figure>
+
+          <figure class="chart">
+            <figcaption class="chart-title">Valor de los 377 proveedores únicos ($1,655,512)</figcaption>
+            <div class="stack" role="img" aria-label="70.7% del valor ($1,169,623) en proveedores nunca completados; 29.3% ($485,889) en proveedores completados alguna vez">
+              <span class="stack-seg seg-main" style="flex-basis:70.7%" data-tip="Nunca completados: $1,169,623 (70.7%)">70.7%</span>
+              <span class="stack-seg seg-alt" style="flex-basis:29.3%" data-tip="Completados alguna vez: $485,889 (29.3%)">29.3%</span>
+            </div>
+            <ul class="legend">
+              <li><span class="swatch seg-main"></span>Nunca completados en el mes · 308 proveedores · $1,169,623</li>
+              <li><span class="swatch seg-alt"></span>Completados alguna vez · 69 proveedores · $485,889</li>
+            </ul>
+            <p class="chart-source">Fuente: Pickups Report; cada proveedor contado una sola vez.</p>
+          </figure>
+
+          <h3>Recomendaciones entregadas</h3>
+          <ul class="bullets">
+            <li>Que el sistema baje la prioridad o retire a los proveedores con historial de fallo repetido, en vez de reagendarlos indefinidamente al mismo valor.</li>
+            <li>Revisar por qué el algoritmo no da prioridad al <em>preferred buyer</em> (comprador asignado).</li>
+            <li>Retirar de las rutas activas a los proveedores que ya confirmaron vender a la competencia.</li>
+            <li>Revisar la causa de la baja tasa de completado del comprador con la ruta repetida: las notas apuntan a la calidad de las direcciones más que a la lógica de ruteo.</li>
+          </ul>
+
+          <h3>Entregables</h3>
+          <div class="deliverables">
+            <div class="deliverable"><h3>Informe de auditoría</h3><p>Documento Word de 2 páginas generado con JavaScript (docx).</p></div>
+            <div class="deliverable"><h3>Respaldo metodológico</h3><p>Fuentes de datos, filtros exactos usados y precisiones del análisis.</p></div>
+            <div class="deliverable"><h3>Dashboard estilo Power BI</h3><p>Presentación PowerPoint de 6 diapositivas generada con JavaScript (pptxgenjs).</p></div>
+          </div>
+        </section>
+
+        <section id="evidencia" class="case-section">
+          <h2><span class="sec-num">06</span>Evidencia visual y técnica</h2>
+          <div class="prose">
+            <p>Capturas de lo revisado, recortadas y con los nombres reales sustituidos. Toca una imagen para ampliarla.</p>
+          </div>
+          <div class="gallery">
+            <figure>
+              <button class="zoom" type="button"><img src="../assets/rutas/ruta-18-ago-anonimizada.png" width="620" height="635" loading="lazy" alt="Lista de stops de la ruta del Comprador H del 18 de agosto de 2026, con los proveedores anonimizados; los 9 proveedores del núcleo fijo aparecen en la ruta"></button>
+              <figcaption><strong>Ruta del Comprador H, 18-ago-2026.</strong> 13 stops; aparecen los 9 proveedores del núcleo fijo. Sin mapa y con nombres sustituidos.</figcaption>
+            </figure>
+            <figure>
+              <button class="zoom" type="button"><img src="../assets/rutas/ruta-25-ago-anonimizada.png" width="425" height="725" loading="lazy" alt="Lista de stops de la ruta del Comprador H del 25 de agosto de 2026, con los proveedores anonimizados; vuelven a aparecer los 9 proveedores del núcleo fijo"></button>
+              <figcaption><strong>Ruta del Comprador H, 25-ago-2026.</strong> 15 stops; vuelven a aparecer los 9 proveedores del núcleo (misma numeración).</figcaption>
+            </figure>
+            <figure>
+              <button class="zoom" type="button"><img src="../assets/rutas/dashboard-panorama.png" width="1467" height="825" loading="lazy" alt="Diapositiva Panorama general del dashboard: 975 stops, 18.6% de tasa de completado promedio, 43 conflictos de preferred buyer, 0 descomposturas y tasa de completado por comprador"></button>
+              <figcaption><strong>Dashboard: panorama general.</strong> Diapositiva generada con pptxgenjs; nombres anonimizados.</figcaption>
+            </figure>
+            <figure>
+              <button class="zoom" type="button"><img src="../assets/rutas/reportes-plataforma.png" width="1885" height="305" loading="lazy" alt="Pantalla Report Downloads de la plataforma con los reportes Accidents, Breakdowns, Pickups, Reassigned Stops y Added Stops, rango 25-jul-26 a 25-ago-26"></button>
+              <figcaption><strong>Reportes de la plataforma.</strong> Descargas usadas en el análisis (25-jul a 25-ago-2026).</figcaption>
+            </figure>
+          </div>
+          <p class="code-label">Fragmento del script de verificación final (Python / pandas)</p>
+<pre class="code"><code>resumen = df.groupby('Seller ID').agg(Price=('Price','first'), completadas=('Pickup Status', lambda s:(s=='completed').sum()))
+nunca = resumen[resumen['completadas']==0]
+print(f"% del valor que nunca se cobro: {nunca['Price'].sum()/resumen['Price'].sum()*100:.1f}%")</code></pre>
+        </section>
+
+        <section id="aprendizajes" class="case-section">
+          <h2><span class="sec-num">07</span>Aprendizajes</h2>
+          <div class="prose">
+            <p><strong>Detecté y corregí un error de cálculo.</strong> Al principio se sumaban las visitas repetidas al mismo proveedor, lo que inflaba los montos casi 3 veces. Al recalcular contando cada proveedor una sola vez, el porcentaje de valor no completado se mantuvo alrededor del 70%.</p>
+          </div>
+          <div class="compare">
+            <div><p class="compare-label">Antes · sumando cada intento</p><p class="compare-num strike">$5,059,751</p></div>
+            <div><p class="compare-label">Después · cada proveedor una vez</p><p class="compare-num">$1,655,512</p></div>
+          </div>
+          <ul class="bullets">
+            <li><strong>Validar la unidad de análisis antes de reportar montos:</strong> contar visitas en lugar de proveedores cambia el resultado casi 3 veces.</li>
+            <li><strong>Separar errores del sistema de hábitos previos:</strong> comparar con datos anteriores a la app evitó atribuirle a la IA un patrón que ya existía.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+
+    <nav class="container pager" aria-label="Otros casos">
+      <a class="prev" href="gestion-actualizaciones-action1.html"><small>← Caso anterior</small><strong>Gestión de actualizaciones por anillos con Action1</strong></a>
+      <a class="next" href="rustdesk-control-remoto.html"><small>Siguiente caso →</small><strong>Implementación de RustDesk para control remoto</strong></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 David García Vera</p>
+      <p><a href="../index.html#contacto">Contacto</a></p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#contenido" aria-label="Volver arriba">↑</a>
+
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox-close" type="button" aria-label="Cerrar">×</button>
+    <img alt="">
+    <p class="lightbox-caption"></p>
+  </dialog>
+
+  <script src="../script.js"></script>
+</body>
+</html>
