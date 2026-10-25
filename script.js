@@ -33,3 +33,20 @@ lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightb
 lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) lightbox.close();
 });
+
+// Tooltips de las gráficas
+const tip = document.createElement('div');
+tip.className = 'tip';
+tip.hidden = true;
+document.body.appendChild(tip);
+
+document.querySelectorAll('[data-tip]').forEach((el) => {
+  el.addEventListener('pointermove', (e) => {
+    tip.textContent = el.dataset.tip;
+    tip.hidden = false;
+    const x = Math.min(e.clientX + 12, window.innerWidth - tip.offsetWidth - 8);
+    tip.style.left = `${x}px`;
+    tip.style.top = `${e.clientY - tip.offsetHeight - 10}px`;
+  });
+  el.addEventListener('pointerleave', () => { tip.hidden = true; });
+});

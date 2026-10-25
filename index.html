@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portafolio Profesional</title>
-  <meta name="description" content="Portafolio profesional — Ingeniería en Sistemas Computacionales. Documentación de proyectos con contexto, herramientas, evidencias y resultados.">
+  <title>David García Vera · Portafolio</title>
+  <meta name="description" content="Portafolio profesional de David García Vera — Ingeniería en Sistemas Computacionales, Universidad de Montemorelos. Documentación de proyectos con contexto, herramientas, evidencias y resultados.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,8 +28,8 @@
     <!-- ============ PORTADA ============ -->
     <section id="inicio" class="hero">
       <div class="container">
-        <p class="eyebrow">Ingeniería en Sistemas Computacionales</p>
-        <h1><span class="pending">[PENDIENTE: nombre completo]</span></h1>
+        <p class="eyebrow">Ingeniería en Sistemas Computacionales · Universidad de Montemorelos</p>
+        <h1>David García Vera</h1>
         <p class="lead"><span class="pending">[PENDIENTE: frase de presentación / propuesta de valor]</span></p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
@@ -57,11 +57,17 @@
             <span class="status status-progress">En curso</span>
           </a>
 
-          <div class="project-card project-card--empty">
+          <a class="project-card" href="#auditoria-rutas">
             <span class="card-num">02</span>
-            <h3><span class="pending">[PENDIENTE: Proyecto 2]</span></h3>
-            <p>Se agregará en la Parte 2.</p>
-          </div>
+            <h3>Auditoría de la app de rutas con IA — Germinate</h3>
+            <p>Análisis de un mes de datos de la app que traza las rutas diarias de 8 compradores, para detectar errores de la IA y comportamientos inusuales.</p>
+            <ul class="tags">
+              <li>Python · pandas</li>
+              <li>JavaScript</li>
+              <li>Análisis de datos</li>
+            </ul>
+            <span class="status status-done">Entregado</span>
+          </a>
 
           <div class="project-card project-card--empty">
             <span class="card-num">03</span>
@@ -202,6 +208,188 @@
       </div>
     </article>
 
+    <!-- ============ PROYECTO 02 · AUDITORÍA APP DE RUTAS ============ -->
+    <article id="auditoria-rutas" class="section project">
+      <div class="container">
+        <header class="project-header">
+          <p class="eyebrow">Proyecto 02</p>
+          <h2>Auditoría de la app de rutas con IA — Germinate</h2>
+          <p class="lead">Auditoría de los datos de la app que usa IA para trazar cada día las rutas de 8 compradores que visitan proveedores para recolectar material, con el fin de detectar posibles errores de la IA y comportamientos inusuales.</p>
+
+          <dl class="meta">
+            <div>
+              <dt>Rol</dt>
+              <dd><span class="pending">[PENDIENTE: confirmar rol — p. ej. responsable de la auditoría]</span></dd>
+            </div>
+            <div>
+              <dt>Periodo de datos</dt>
+              <dd>25-jul-2026 a 25-ago-2026</dd>
+            </div>
+            <div>
+              <dt>Estado</dt>
+              <dd><span class="status status-done">Entregado</span></dd>
+            </div>
+          </dl>
+        </header>
+
+        <div class="project-body">
+          <section class="block">
+            <h3>Contexto y objetivo</h3>
+            <p>En Germinate, una app con IA traza cada día las rutas de 8 compradores que visitan proveedores para recolectar material. Mi jefe me pidió <strong>auditar posibles errores de la IA y comportamientos inusuales</strong> en esas rutas.</p>
+            <p class="note">Por confidencialidad, los compradores y proveedores aparecen anonimizados (Comprador A, Proveedor 1, etc.).</p>
+          </section>
+
+          <section class="block">
+            <h3>Metodología y herramientas</h3>
+            <p><strong>Fuentes de datos</strong></p>
+            <ul class="checklist">
+              <li>Reportes descargados de la plataforma: <em>Pickups</em> (975 intentos de recolección), <em>Reassigned Stops</em>, <em>Breakdowns</em> y <em>Added Stops</em>.</li>
+              <li>CSV de compras de un comprador: 350 folios de enero a agosto de 2026.</li>
+              <li>Capturas diarias de rutas.</li>
+            </ul>
+            <p><strong>Proceso</strong></p>
+            <ul class="checklist">
+              <li>Análisis de los CSV con Python/pandas: agrupación por comprador y por proveedor, tasa de completado y recurrencia de proveedores por día.</li>
+              <li>Búsqueda en las notas de falla (<em>Fail Note</em>) de frases como “atiende”, “vende a”, “le compra” o “le vende” para identificar conflictos de comprador asignado.</li>
+              <li>Generación automática del informe en Word y de un dashboard en PowerPoint estilo Power BI con JavaScript.</li>
+              <li>Organización de la evidencia en Google Drive.</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li>
+              <li>pandas</li>
+              <li>JavaScript</li>
+              <li>docx</li>
+              <li>pptxgenjs</li>
+              <li>Google Drive</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>Hallazgos</h3>
+            <div class="findings">
+              <div class="finding">
+                <p class="finding-num">$37,620</p>
+                <h4>Ruta repetida</h4>
+                <p>Un comprador tenía un núcleo de 9 proveedores que aparecía en el 100% de los días con captura completa. Los 9 tuvieron <strong>0% de recolecciones completadas</strong> en el mes, casi siempre por dirección incorrecta o problemas de acceso. Valor de esos 9 proveedores, contado una sola vez cada uno: $37,620.</p>
+              </div>
+              <div class="finding">
+                <p class="finding-num">43 intentos</p>
+                <h4>Preferred buyer</h4>
+                <p>43 intentos en el mes donde el proveedor dijo que lo atiende otro comprador: 18 proveedores únicos ($89,409). Solo hubo 2 reasignaciones manuales en el mes, y eran el mismo movimiento revertido un minuto después.</p>
+              </div>
+              <div class="finding">
+                <p class="finding-num">53 proveedores</p>
+                <h4>Sin retroalimentación</h4>
+                <p>El valor estimado (<em>Price</em>) de cada proveedor nunca cambió entre visitas: se revisaron 53 proveedores con varias visitas y al menos una completada. No hay evidencia de retroalimentación en el sistema.</p>
+              </div>
+              <div class="finding">
+                <p class="finding-num">70.7%</p>
+                <h4>Impacto económico</h4>
+                <p>377 proveedores únicos con un valor de $1,655,512. El 70.7% ($1,169,623) corresponde a proveedores que nunca se completaron en el mes.</p>
+              </div>
+              <div class="finding">
+                <p class="finding-num">2.30 vs 2.13</p>
+                <h4>Patrón previo a la app</h4>
+                <p>El patrón de pocas visitas diarias de otro comprador ya existía antes de la app (2.30 proveedores/día sin app vs 2.13 con app), así que no es un error del sistema.</p>
+              </div>
+              <div class="finding">
+                <p class="finding-num">4.4% – 55.3%</p>
+                <h4>Tasa de completado</h4>
+                <p>La tasa de completado por comprador va desde 4.4% hasta 55.3%.</p>
+              </div>
+            </div>
+
+            <figure class="chart">
+              <figcaption class="chart-title">Tasa de completado por comprador (%)</figcaption>
+              <div class="bars" role="list">
+                <div class="bar-row" role="listitem" data-tip="Comprador A: 55.3%"><span class="bar-label">Comprador A</span><span class="bar-track"><span class="bar" style="--v:55.3"></span></span><span class="bar-value">55.3%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador B: 49.2%"><span class="bar-label">Comprador B</span><span class="bar-track"><span class="bar" style="--v:49.2"></span></span><span class="bar-value">49.2%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador C: 19.3%"><span class="bar-label">Comprador C</span><span class="bar-track"><span class="bar" style="--v:19.3"></span></span><span class="bar-value">19.3%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador D: 11.9%"><span class="bar-label">Comprador D</span><span class="bar-track"><span class="bar" style="--v:11.9"></span></span><span class="bar-value">11.9%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador E: 10.5%"><span class="bar-label">Comprador E</span><span class="bar-track"><span class="bar" style="--v:10.5"></span></span><span class="bar-value">10.5%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador F: 10.0%"><span class="bar-label">Comprador F</span><span class="bar-track"><span class="bar" style="--v:10.0"></span></span><span class="bar-value">10.0%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador G: 7.0%"><span class="bar-label">Comprador G</span><span class="bar-track"><span class="bar" style="--v:7.0"></span></span><span class="bar-value">7.0%</span></div>
+                <div class="bar-row" role="listitem" data-tip="Comprador H (ruta repetida): 4.4%"><span class="bar-label">Comprador H <small>ruta repetida</small></span><span class="bar-track"><span class="bar" style="--v:4.4"></span></span><span class="bar-value">4.4%</span></div>
+              </div>
+              <p class="chart-source">Fuente: Pickups Report, 25-jul a 25-ago-2026 (975 intentos).</p>
+            </figure>
+
+            <figure class="chart">
+              <figcaption class="chart-title">Valor de los 377 proveedores únicos ($1,655,512)</figcaption>
+              <div class="stack" role="img" aria-label="70.7% del valor ($1,169,623) en proveedores nunca completados; 29.3% ($485,889) en proveedores completados alguna vez">
+                <span class="stack-seg seg-main" style="flex-basis:70.7%" data-tip="Nunca completados: $1,169,623 (70.7%)">70.7%</span>
+                <span class="stack-seg seg-alt" style="flex-basis:29.3%" data-tip="Completados alguna vez: $485,889 (29.3%)">29.3%</span>
+              </div>
+              <ul class="legend">
+                <li><span class="swatch seg-main"></span>Nunca completados en el mes · 308 proveedores · $1,169,623</li>
+                <li><span class="swatch seg-alt"></span>Completados alguna vez · 69 proveedores · $485,889</li>
+              </ul>
+              <p class="chart-source">Fuente: Pickups Report; cada proveedor contado una sola vez.</p>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h3>Corrección de cálculo y aprendizajes</h3>
+            <p>Detecté y corregí un error de cálculo: al principio se sumaban las visitas repetidas al mismo proveedor, lo que <strong>inflaba los montos casi 3 veces</strong>. Al recalcular contando cada proveedor una sola vez, el porcentaje de valor no completado se mantuvo alrededor del 70%.</p>
+            <div class="compare">
+              <div><p class="compare-label">Antes (sumando cada intento)</p><p class="compare-num strike">$5,059,751</p></div>
+              <div><p class="compare-label">Después (cada proveedor una vez)</p><p class="compare-num">$1,655,512</p></div>
+            </div>
+            <p>Fragmento del script de verificación final (Python/pandas):</p>
+<pre class="code"><code>resumen = df.groupby('Seller ID').agg(Price=('Price','first'), completadas=('Pickup Status', lambda s:(s=='completed').sum()))
+nunca = resumen[resumen['completadas']==0]
+print(f"% del valor que nunca se cobro: {nunca['Price'].sum()/resumen['Price'].sum()*100:.1f}%")</code></pre>
+          </section>
+
+          <section class="block">
+            <h3>Recomendaciones entregadas</h3>
+            <ul class="checklist">
+              <li>Que el sistema baje la prioridad o retire a los proveedores con historial de fallo repetido, en vez de reagendarlos indefinidamente al mismo valor.</li>
+              <li>Revisar por qué el algoritmo no da prioridad al <em>preferred buyer</em> (comprador asignado).</li>
+              <li>Retirar de las rutas activas a los proveedores que ya confirmaron vender a la competencia.</li>
+              <li>Revisar la causa de la baja tasa de completado del comprador con la ruta repetida: las notas apuntan a la calidad de las direcciones más que a la lógica de ruteo.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>Entregables y evidencia</h3>
+            <div class="deliverables">
+              <div class="deliverable">
+                <h4>Informe de auditoría</h4>
+                <p>Documento Word de 2 páginas generado con JavaScript (docx).</p>
+                <p><span class="pending">[PENDIENTE: enlace al informe]</span></p>
+              </div>
+              <div class="deliverable">
+                <h4>Respaldo metodológico</h4>
+                <p>Fuentes de datos, filtros exactos usados y precisiones del análisis.</p>
+                <p><span class="pending">[PENDIENTE: enlace al respaldo con cifras corregidas]</span></p>
+              </div>
+              <div class="deliverable">
+                <h4>Dashboard estilo Power BI</h4>
+                <p>Presentación PowerPoint de 6 diapositivas generada con JavaScript (pptxgenjs).</p>
+                <p><span class="pending">[PENDIENTE: enlace al dashboard]</span></p>
+              </div>
+            </div>
+
+            <div class="evidence-own two-up">
+              <div class="placeholder-figure" role="img" aria-label="Espacio reservado para captura de ruta">
+                <span class="pending">[PENDIENTE: captura de ruta (recortada / anonimizada)]</span>
+              </div>
+              <div class="placeholder-figure" role="img" aria-label="Espacio reservado para captura del dashboard">
+                <span class="pending">[PENDIENTE: captura del dashboard]</span>
+              </div>
+            </div>
+
+            <ul class="link-list">
+              <li><a href="https://drive.google.com/drive/folders/1EquZms9oqIWYJAtPs_0Ol9Psg5K8I93T" target="_blank" rel="noopener">Carpeta de evidencias del proyecto (Google Drive)</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <a class="back-link" href="#proyectos">← Volver a proyectos</a>
+      </div>
+    </article>
+
     <!-- ============ CONTACTO ============ -->
     <section id="contacto" class="section section-alt">
       <div class="container">
@@ -213,7 +401,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Portafolio Profesional · Ingeniería en Sistemas Computacionales</p>
+      <p>David García Vera · Ingeniería en Sistemas Computacionales · Universidad de Montemorelos</p>
     </div>
   </footer>
 
