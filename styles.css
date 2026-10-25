@@ -313,3 +313,41 @@ a.project-card:hover { transform: translateY(-2px); border-color: var(--accent);
 .deliverable p:last-child { margin-bottom: 0; }
 .two-up { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .gallery .placeholder-figure { min-height: 160px; flex: 1; }
+
+/* ---------- Proyecto 03 ---------- */
+.muted { color: var(--muted); font-weight: 500; font-size: .9rem; }
+.placeholder-sm { min-height: 140px; margin-top: 16px; }
+.evidence-slots { margin-top: 8px; }
+
+.kpis { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); margin-bottom: 18px; }
+.kpi { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: var(--surface-alt); }
+.kpi p { margin: 0; }
+.kpi-num { font-size: 1.6rem; font-weight: 800; color: var(--accent); line-height: 1.2; font-variant-numeric: tabular-nums; }
+.kpi-label { font-size: .85rem; color: var(--muted); }
+
+.rings {
+  margin: 20px 0; display: flex; align-items: stretch; flex-wrap: wrap; gap: 8px;
+}
+.ring-step {
+  flex: 1 1 0; min-width: 120px; border: 1px solid var(--border); border-top: 4px solid var(--accent);
+  border-radius: 10px; padding: 12px; background: var(--surface-alt);
+}
+.ring-start { border-top-color: var(--muted); }
+.ring-step p { margin: 0; }
+.ring-name { font-weight: 800; }
+.ring-who { font-size: .85rem; margin-top: 4px !important; }
+.ring-when { font-size: .8rem; color: var(--muted); margin-top: 4px !important; }
+.ring-arrow { align-self: center; width: 18px; height: 18px; flex: none; position: relative; }
+.ring-arrow::before { content: "→"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-weight: 700; }
+.rings figcaption { flex-basis: 100%; font-size: .85rem; color: var(--muted); margin-top: 6px; }
+@media (max-width: 760px) {
+  .rings { flex-direction: column; }
+  .ring-step { min-width: 0; }
+  .ring-arrow::before { content: "↓"; }
+}
+
+.table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+.data-table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 540px; }
+.data-table th, .data-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.data-table th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.data-table td:first-child { font-weight: 700; white-space: nowrap; }
