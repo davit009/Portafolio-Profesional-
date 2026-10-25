@@ -13,3 +13,23 @@ nav.querySelectorAll('a').forEach((link) => {
     toggle.setAttribute('aria-expanded', 'false');
   });
 });
+
+// Ampliar imágenes de la galería
+const lightbox = document.querySelector('.lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+
+document.querySelectorAll('.zoom').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const img = btn.querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = img.alt;
+    lightbox.showModal();
+  });
+});
+
+lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) lightbox.close();
+});

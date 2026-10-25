@@ -48,7 +48,7 @@
           <a class="project-card" href="#rustdesk">
             <span class="card-num">01</span>
             <h3>Implementación de RustDesk para control remoto de dispositivos</h3>
-            <p>Configuración de perfiles en RustDesk y asignación de dispositivos móviles y Windows de la empresa, administrados desde el perfil de administrador.</p>
+            <p>Configuración de perfiles en RustDesk y asignación de dispositivos Android y Windows de la empresa, administrados desde el perfil de administrador.</p>
             <ul class="tags">
               <li>RustDesk</li>
               <li>Control remoto</li>
@@ -78,12 +78,12 @@
         <header class="project-header">
           <p class="eyebrow">Proyecto 01</p>
           <h2>Implementación de RustDesk para control remoto de dispositivos</h2>
-          <p class="lead">Implementación de RustDesk en la empresa donde trabajo para controlar de forma remota dispositivos móviles y Windows, con perfiles configurados y administrados desde el perfil de administrador.</p>
+          <p class="lead">Implementación de RustDesk en la empresa donde trabajo para controlar de forma remota dispositivos Android y Windows, con perfiles configurados y administrados desde el perfil de administrador.</p>
 
           <dl class="meta">
             <div>
               <dt>Rol</dt>
-              <dd><span class="pending">[PENDIENTE: tu rol y responsabilidad en el proyecto]</span></dd>
+              <dd>Administrador del proyecto · Becario (prácticas profesionales)</dd>
             </div>
             <div>
               <dt>Inicio</dt>
@@ -98,15 +98,20 @@
 
         <div class="project-body">
           <section class="block">
+            <h3>Rol y responsabilidad</h3>
+            <p>Como estudiante de ingeniería en prácticas profesionales (becario en la empresa), soy el administrador de este proyecto. Mi responsabilidad fue crear cada perfil con los roles que ofrece la aplicación.</p>
+          </section>
+
+          <section class="block">
             <h3>Contexto y problema</h3>
-            <p>En la empresa donde trabajo se implementa RustDesk para controlar dispositivos de forma remota. Ya existía otro software de gestión de dispositivos; RustDesk se suma para que lo usen tanto los administradores como otros usuarios con dispositivos de la empresa (móviles y Windows).</p>
+            <p>En la empresa donde trabajo se implementa RustDesk para controlar dispositivos de forma remota. Ya existía otro software de gestión de dispositivos; RustDesk se suma para que lo usen tanto los administradores como otros usuarios con dispositivos de la empresa (Android y Windows).</p>
           </section>
 
           <section class="block">
             <h3>Objetivo</h3>
             <ul class="checklist">
               <li>Configurar perfiles en RustDesk.</li>
-              <li>Asignar dispositivos móviles y Windows a esos perfiles.</li>
+              <li>Asignar dispositivos Android y Windows a esos perfiles.</li>
               <li>Administrar todo correctamente desde el perfil de administrador.</li>
             </ul>
           </section>
@@ -116,10 +121,9 @@
             <ul class="tags">
               <li>RustDesk</li>
               <li>Consola web de RustDesk</li>
-              <li>Dispositivos móviles</li>
+              <li>Android</li>
               <li>Windows</li>
             </ul>
-            <p><span class="pending">[PENDIENTE: confirmar o completar el stack, software y metodologías utilizadas]</span></p>
           </section>
 
           <section class="block">
@@ -154,11 +158,42 @@
 
             <aside class="reference">
               <p class="reference-label">Referencia: documentación oficial de RustDesk</p>
-              <p>Las siguientes capturas provienen de la documentación oficial de RustDesk y <strong>no corresponden a mi configuración</strong>. Muestran el login y la página principal de la consola web, el menú de estrategias/perfiles y los diálogos para asignar dispositivos, usuarios y grupos de dispositivos.</p>
-              <ul class="link-list">
-                <li><a href="https://docs.google.com/document/d/1T4z5PG3f5Vkol8wNIM1Ej31ODe9hCrmvfCazyWlUsaM/edit" target="_blank" rel="noopener">Referencias visuales (6 capturas de la documentación oficial)</a></li>
-                <li><a href="https://rustdesk.com/docs" target="_blank" rel="noopener">Documentación oficial de RustDesk — rustdesk.com/docs</a></li>
-              </ul>
+              <p>Por políticas de la empresa no se publican capturas reales de la configuración. Las siguientes imágenes provienen de la <a href="https://rustdesk.com/docs" target="_blank" rel="noopener">documentación oficial de RustDesk</a> y <strong>no corresponden a mi configuración</strong>; ilustran las pantallas de la consola web con las que se trabaja en el proyecto. Toca una imagen para ampliarla.</p>
+
+              <div class="gallery">
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/console-login.png" width="2880" height="1586" loading="lazy" alt="Pantalla de inicio de sesión de la consola web de RustDesk"></button>
+                  <figcaption>Inicio de sesión de la consola web. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/console/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/console-home.png" width="2880" height="1589" loading="lazy" alt="Página principal de la consola web de RustDesk con el menú lateral"></button>
+                  <figcaption>Página principal de la consola con su menú (dispositivos, usuarios, grupos, estrategias). <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/console/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/strategy_menu.png" width="192" height="304" loading="lazy" alt="Menú de opciones de una estrategia en la consola de RustDesk"></button>
+                  <figcaption>Menú de una estrategia: editar dispositivos, usuarios y grupos de dispositivos. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/edit_devices.png" width="1154" height="629" loading="lazy" alt="Diálogo para agregar o quitar dispositivos de una estrategia"></button>
+                  <figcaption>Asignar dispositivos a una estrategia. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/edit_users.png" width="1149" height="439" loading="lazy" alt="Diálogo para asignar usuarios a una estrategia"></button>
+                  <figcaption>Asignar usuarios a una estrategia. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/edit_device_groups.png" width="1154" height="495" loading="lazy" alt="Diálogo para asignar grupos de dispositivos a una estrategia"></button>
+                  <figcaption>Asignar grupos de dispositivos a una estrategia. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/strategy/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/admin-role-create-permission.png" width="961" height="643" loading="lazy" alt="Creación de un rol de administrador seleccionando permisos"></button>
+                  <figcaption>Crear un rol de administrador (Admin Role) y elegir sus permisos. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/admin-role/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+                <figure>
+                  <button class="zoom" type="button"><img src="assets/rustdesk/control-role-create-permission.png" width="640" height="668" loading="lazy" alt="Creación de un rol de control con permisos de sesión remota"></button>
+                  <figcaption>Crear un rol de control (Control Role) con permisos de la sesión remota. <a href="https://rustdesk.com/docs/en/self-host/rustdesk-server-pro/control-role/" target="_blank" rel="noopener">Fuente</a></figcaption>
+                </figure>
+              </div>
             </aside>
           </section>
         </div>
@@ -181,6 +216,12 @@
       <p>Portafolio Profesional · Ingeniería en Sistemas Computacionales</p>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox-close" type="button" aria-label="Cerrar">×</button>
+    <img alt="">
+    <p class="lightbox-caption"></p>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
