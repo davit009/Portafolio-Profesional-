@@ -31,28 +31,69 @@ if ('IntersectionObserver' in window) {
 }
 
 // Resaltar la sección visible en el menú o en la barra del caso
-const spyLinks = [...document.querySelectorAll('[data-spy] a[href^="#"]')];
+const spyLinks = [...document.querySelectorAll('[data-spy-key]')];
 
 if (spyLinks.length && 'IntersectionObserver' in window) {
-  const byId = new Map(spyLinks.map((a) => [a.getAttribute('href').slice(1), a]));
+  const keys = new Set(spyLinks.map((l) => l.dataset.spyKey));
+  const keyOf = (el) => el.dataset.section || el.id;
+  const targets = [...document.querySelectorAll('[data-section], section[id]')]
+    .filter((el) => keys.has(keyOf(el)) || el.dataset.section === 'none');
+
   const spy = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      spyLinks.forEach((a) => a.classList.remove('active'));
-      const link = byId.get(entry.target.id);
-      if (!link) return;
-      link.classList.add('active');
-      const list = link.closest('ol');
+      const key = keyOf(entry.target);
+      spyLinks.forEach((l) => {
+        const on = l.dataset.spyKey === key;
+        l.classList.toggle('active', on);
+        if (on) l.setAttribute('aria-current', 'location'); else l.removeAttribute('aria-current');
+      });
+      const link = spyLinks.find((l) => l.dataset.spyKey === key);
+      const list = link && link.closest('ol');
       if (list && list.scrollWidth > list.clientWidth) {
         list.scrollTo({ left: link.offsetLeft - 22, behavior: 'smooth' });
       }
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
 
-  byId.forEach((_, id) => {
-    const section = document.getElementById(id);
-    if (section) spy.observe(section);
+  targets.forEach((el) => spy.observe(el));
+}
+
+// Menús desplegables (casos de estudio)
+const canHover = window.matchMedia('(hover: hover) and (min-width: 761px)');
+
+document.querySelectorAll('[data-menu]').forEach((menu) => {
+  const btn = menu.querySelector('.menu-btn');
+  let timer;
+  const set = (open) => {
+    menu.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  };
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Con mouse el menú ya se abre al pasar el cursor: el clic lo mantiene abierto
+    set(canHover.matches ? true : !menu.classList.contains('open'));
   });
+  menu.addEventListener('mouseenter', () => { if (canHover.matches) { clearTimeout(timer); set(true); } });
+  menu.addEventListener('mouseleave', () => { if (canHover.matches) timer = setTimeout(() => set(false), 180); });
+  document.addEventListener('click', (e) => { if (!menu.contains(e.target)) set(false); });
+  menu.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { set(false); btn.focus(); }
+  });
+  menu.querySelectorAll('.menu-panel a').forEach((a) => a.addEventListener('click', () => set(false)));
+});
+
+// Barra de progreso de lectura
+const progress = document.querySelector('.progress span');
+
+if (progress) {
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? Math.min(1, window.scrollY / max) : 0})`;
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 }
 
 // Galerías deslizables

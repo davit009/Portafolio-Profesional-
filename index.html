@@ -22,20 +22,28 @@
 
   <header class="gnav">
     <div class="gnav-inner">
-      <a class="gnav-brand" href="#inicio">David García Vera</a>
+      <a class="gnav-brand" href="#inicio"><span class="mark" aria-hidden="true">DG</span>David García Vera</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú"><span></span><span></span></button>
-      <nav id="nav-menu" class="gnav-links" aria-label="Principal" data-spy>
-        <a href="#propuesta">Perfil</a>
-        <a href="#casos">Casos de estudio</a>
-        <a href="#trayectoria">Trayectoria</a>
-        <a href="#contacto">Contacto</a>
+      <nav id="nav-menu" class="gnav-links" aria-label="Principal">
+        <a href="#propuesta" data-spy-key="propuesta">Perfil</a>
+        <div class="menu" data-menu>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-casos" data-spy-key="casos">Casos de estudio <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="menu-panel" id="menu-casos">
+            <a href="proyectos/gestion-actualizaciones-action1.html"><small>Caso 01 · Techemet</small><strong>Actualizaciones por anillos</strong></a>
+            <a href="proyectos/auditoria-rutas-ia.html"><small>Caso 02 · Germinate</small><strong>Auditoría de rutas con IA</strong></a>
+            <a href="proyectos/rustdesk-control-remoto.html"><small>Caso 03 · Prácticas profesionales</small><strong>Control remoto con RustDesk</strong></a>
+            <a class="menu-all" href="#casos">Ver resumen de los casos ›</a>
+          </div>
+        </div>
+        <a href="#trayectoria" data-spy-key="trayectoria">Trayectoria</a>
+        <a class="gnav-cta" href="#contacto" data-spy-key="contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
     <!-- Portada -->
-    <section id="inicio" class="hero theme-light">
+    <section id="inicio" class="hero theme-light" data-section="none">
       <div class="wrap center">
         <p class="eyebrow reveal">David García Vera</p>
         <h1 class="display reveal">Soporte de TI.<br><span class="grad">Endpoints.</span><br>Ciberseguridad.</h1>
@@ -54,7 +62,7 @@
     </section>
 
     <!-- Cifras -->
-    <section class="block theme-dark" aria-labelledby="cifras-titulo">
+    <section class="block theme-dark" aria-labelledby="cifras-titulo" data-section="none">
       <div class="wrap">
         <div class="block-head">
           <h2 id="cifras-titulo" class="headline reveal">En cifras.</h2>
@@ -109,7 +117,7 @@
     </section>
 
     <!-- Casos de estudio -->
-    <section id="casos" class="block-tight theme-light">
+    <section id="casos" class="block-tight theme-light" data-section="casos">
       <div class="wrap center">
         <p class="eyebrow reveal">Casos de estudio</p>
         <h2 class="headline reveal">Tres proyectos.<br>En empresas reales.</h2>
@@ -117,7 +125,7 @@
       </div>
     </section>
 
-    <section class="promo theme-gray" aria-labelledby="caso01">
+    <section class="promo theme-gray" aria-labelledby="caso01" data-section="casos">
       <div class="wrap center">
         <p class="eyebrow eyebrow-accent reveal">Caso 01 · Techemet</p>
         <h3 id="caso01" class="headline reveal">Actualizaciones<br>por anillos.</h3>
@@ -132,7 +140,7 @@
       </div>
     </section>
 
-    <section class="promo theme-dark" aria-labelledby="caso02">
+    <section class="promo theme-dark" aria-labelledby="caso02" data-section="casos">
       <div class="wrap center">
         <p class="eyebrow eyebrow-accent reveal">Caso 02 · Germinate</p>
         <h3 id="caso02" class="headline reveal">Auditoría de rutas<br>generadas con IA.</h3>
@@ -147,7 +155,7 @@
       </div>
     </section>
 
-    <section class="promo theme-gray" aria-labelledby="caso03">
+    <section class="promo theme-gray" aria-labelledby="caso03" data-section="casos">
       <div class="wrap center">
         <p class="eyebrow eyebrow-accent reveal">Caso 03 · Prácticas profesionales</p>
         <h3 id="caso03" class="headline reveal">Control remoto<br>con RustDesk.</h3>

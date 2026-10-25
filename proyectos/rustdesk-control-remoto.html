@@ -19,33 +19,53 @@
 
   <header class="gnav gnav-static">
     <div class="gnav-inner">
-      <a class="gnav-brand" href="../index.html">David García Vera</a>
+      <a class="gnav-brand" href="../index.html"><span class="mark" aria-hidden="true">DG</span>David García Vera</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú"><span></span><span></span></button>
       <nav id="nav-menu" class="gnav-links" aria-label="Principal">
         <a href="../index.html#propuesta">Perfil</a>
-        <a class="active" href="../index.html#casos" aria-current="page">Casos de estudio</a>
+        <div class="menu" data-menu>
+          <button class="menu-btn active" type="button" aria-expanded="false" aria-controls="menu-casos">Casos de estudio <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="menu-panel" id="menu-casos">
+            <a href="gestion-actualizaciones-action1.html"><small>Caso 01 · Techemet</small><strong>Actualizaciones por anillos</strong></a>
+            <a href="auditoria-rutas-ia.html"><small>Caso 02 · Germinate</small><strong>Auditoría de rutas con IA</strong></a>
+            <a href="rustdesk-control-remoto.html" aria-current="page"><small>Caso 03 · Prácticas profesionales</small><strong>Control remoto con RustDesk</strong></a>
+            <a class="menu-all" href="../index.html#casos">Ver resumen de los casos ›</a>
+          </div>
+        </div>
         <a href="../index.html#trayectoria">Trayectoria</a>
-        <a href="../index.html#contacto">Contacto</a>
+        <a class="gnav-cta" href="../index.html#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <nav class="lnav" aria-label="Secciones del caso">
+  <nav class="lnav" aria-label="Navegación del caso">
     <div class="lnav-inner">
-      <a class="lnav-title" href="#contenido">Caso 03 <span>· RustDesk</span></a>
-      <ol class="lnav-links" data-spy>
-        <li><a href="#contexto">Contexto</a></li>
-        <li><a href="#rol">Rol</a></li>
-        <li><a href="#herramientas">Herramientas</a></li>
-        <li><a href="#solucion">Solución</a></li>
-        <li><a href="#resultados">Resultados</a></li>
-        <li><a href="#referencias">Referencias visuales</a></li>
+      <div class="lnav-left">
+        <a class="lnav-back" href="../index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Inicio</a>
+        <span class="lnav-sep" aria-hidden="true"></span>
+        <div class="menu" data-menu>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-switch" aria-label="Cambiar de caso de estudio">Caso 03 <span>· RustDesk</span> <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="menu-panel" id="menu-switch">
+            <a href="gestion-actualizaciones-action1.html"><small>Caso 01 · Techemet</small><strong>Actualizaciones por anillos</strong></a>
+            <a href="auditoria-rutas-ia.html"><small>Caso 02 · Germinate</small><strong>Auditoría de rutas con IA</strong></a>
+            <a href="rustdesk-control-remoto.html" aria-current="page"><small>Caso 03 · Prácticas profesionales</small><strong>Control remoto con RustDesk</strong></a>
+          </div>
+        </div>
+      </div>
+      <ol class="lnav-links" aria-label="Secciones">
+        <li><a href="#contexto" data-spy-key="contexto">Contexto</a></li>
+        <li><a href="#rol" data-spy-key="rol">Rol</a></li>
+        <li><a href="#herramientas" data-spy-key="herramientas">Herramientas</a></li>
+        <li><a href="#solucion" data-spy-key="solucion">Solución</a></li>
+        <li><a href="#resultados" data-spy-key="resultados">Resultados</a></li>
+        <li><a href="#referencias" data-spy-key="referencias">Referencias visuales</a></li>
       </ol>
     </div>
+    <div class="progress" aria-hidden="true"><span></span></div>
   </nav>
 
   <main id="contenido">
-    <section class="case-hero theme-light">
+    <section class="case-hero theme-light" data-section="none">
       <div class="wrap center">
         <p class="eyebrow eyebrow-accent reveal">Caso de estudio 03 · Administración de endpoints</p>
         <h1 class="display reveal">Control remoto con RustDesk.</h1>
@@ -210,7 +230,7 @@
       </div>
     </section>
 
-    <section class="block next-case theme-light">
+    <section class="block next-case theme-light" data-section="none">
       <div class="wrap center">
         <p class="eyebrow reveal">Casos de estudio</p>
         <h2 class="title reveal">Conoce los otros dos casos.</h2>
