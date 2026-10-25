@@ -5,279 +5,302 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gestión de actualizaciones con Action1 · David García Vera</title>
   <meta name="description" content="Caso de estudio: diagnóstico y rediseño del proceso de actualizaciones de equipos Windows de Techemet con un despliegue por anillos en Action1, alineado con NIST SP 800-40, CIS Controls v8.1 y CISA KEV.">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap">
   <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">DG</span><span class="brand-name">David García Vera</span></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="nav-menu" class="nav" aria-label="Principal">
+  <header class="gnav gnav-static">
+    <div class="gnav-inner">
+      <a class="gnav-brand" href="../index.html">David García Vera</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú"><span></span><span></span></button>
+      <nav id="nav-menu" class="gnav-links" aria-label="Principal">
         <a href="../index.html#propuesta">Perfil</a>
-        <a class="active" href="../index.html#proyectos" aria-current="page">Proyectos</a>
+        <a class="active" href="../index.html#casos" aria-current="page">Casos de estudio</a>
         <a href="../index.html#trayectoria">Trayectoria</a>
-        <a class="nav-cta" href="../index.html#contacto">Contacto</a>
+        <a href="../index.html#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main id="contenido">
-    <section class="night case-hero">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Ruta de navegación"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><a href="../index.html#proyectos">Proyectos</a><span aria-hidden="true">/</span>Caso 01</nav>
-        <p class="eyebrow">Caso de estudio 01 · Ciberseguridad e infraestructura</p>
-        <h1>Gestión de actualizaciones por anillos con Action1</h1>
-        <p class="lead">Rediseño del proceso de <em>patch management</em> de los equipos Windows de Techemet, empresa con operación multi-sede en México: del diagnóstico del rezago a un despliegue progresivo por anillos, alineado con NIST SP 800-40 Rev. 4, CIS Controls v8.1 (Control 7) y el catálogo CISA KEV.</p>
+  <nav class="lnav" aria-label="Secciones del caso">
+    <div class="lnav-inner">
+      <a class="lnav-title" href="#contenido">Caso 01 <span>· Action1</span></a>
+      <ol class="lnav-links" data-spy>
+        <li><a href="#contexto">Contexto</a></li>
+        <li><a href="#rol">Rol</a></li>
+        <li><a href="#herramientas">Herramientas</a></li>
+        <li><a href="#solucion">Solución</a></li>
+        <li><a href="#implementacion">Implementación</a></li>
+        <li><a href="#evidencia">Evidencia</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#aprendizajes">Aprendizajes</a></li>
+      </ol>
+    </div>
+  </nav>
 
-        <dl class="facts">
-          <div><dt>Organización</dt><dd>Techemet · matriz y sucursales en México</dd></div>
+  <main id="contenido">
+    <section class="case-hero theme-light">
+      <div class="wrap center">
+        <p class="eyebrow eyebrow-accent reveal">Caso de estudio 01 · Ciberseguridad e infraestructura</p>
+        <h1 class="display reveal">Gestión de actualizaciones por anillos.</h1>
+        <p class="copy reveal">Rediseño del proceso de <em>patch management</em> de los equipos Windows de Techemet, empresa con operación multi-sede en México: del diagnóstico del rezago a <strong>un despliegue progresivo por anillos</strong>, alineado con NIST SP 800-40 Rev. 4, CIS Controls v8.1 (Control 7) y el catálogo CISA KEV.</p>
+        <dl class="facts reveal">
+          <div><dt>Organización</dt><dd>Techemet</dd></div>
           <div><dt>Rol</dt><dd>Responsable del diagnóstico, diseño e implementación</dd></div>
           <div><dt>Periodo</dt><dd>Agosto – diciembre 2026 · residencia profesional</dd></div>
-          <div><dt>Estado</dt><dd><span class="status status-done">Implementado</span></dd></div>
+          <div><dt>Estado</dt><dd class="done">Implementado</dd></div>
         </dl>
-        <ul class="tags"><li>Action1</li><li>Update Rings</li><li>Automations</li><li>Run Script</li><li>CSV</li><li>Excel</li></ul>
+        <p class="stackline reveal">Action1 · Update Rings · Automations · Run Script · CSV · Excel</p>
+      </div>
+      <div class="case-visual reveal">
+        <figure class="window"><img src="../assets/action1/ring1-update-ring.png" width="1123" height="886" alt="Configuración del anillo Ring 1 en Action1: toma las actualizaciones de Ring 0 tras 6 días con al menos 70 por ciento de éxito"></figure>
       </div>
     </section>
 
-    <div class="container case-layout">
-      <nav class="toc" aria-label="Contenido del caso" data-spy>
-        <p class="toc-title">En este caso</p>
-        <ol>
-          <li><a href="#contexto">Contexto y problema</a></li>
-          <li><a href="#rol">Rol</a></li>
-          <li><a href="#herramientas">Herramientas</a></li>
-          <li><a href="#solucion">Solución</a></li>
-          <li><a href="#implementacion">Implementación</a></li>
-          <li><a href="#evidencia">Evidencia</a></li>
-          <li><a href="#resultados">Resultados e impacto</a></li>
-          <li><a href="#aprendizajes">Aprendizajes</a></li>
+    <section id="contexto" class="chapter theme-gray">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>01</b>Contexto y problema</p>
+        <h2 class="chapter-title reveal">Las actualizaciones se acumulaban.</h2>
+        <p class="copy reveal">Techemet administraba sus equipos Windows con Action1, pero no existía un proceso que garantizara que los parches se aplicaran de forma <strong>continua, ordenada y medible</strong>. El diagnóstico que realicé el 14 de agosto de 2026 dimensionó el problema.</p>
+
+        <div class="numbers numbers-3">
+          <div class="number reveal"><p class="number-value grad">167</p><p class="number-caption">endpoints administrados</p></div>
+          <div class="number reveal"><p class="number-value grad">4,925</p><p class="number-caption">vulnerabilidades detectadas</p></div>
+          <div class="number reveal"><p class="number-value grad">4,340</p><p class="number-caption">vencidas según el SLA</p></div>
+          <div class="number reveal"><p class="number-value grad">43</p><p class="number-caption">equipos con más de 31 días sin conectarse (~26% de la flota)</p></div>
+          <div class="number reveal"><p class="number-value grad">11</p><p class="number-caption">equipos con reinicio pendiente</p></div>
+          <div class="number reveal"><p class="number-value grad">7</p><p class="number-caption">vulnerabilidades CISA KEV vencidas desde hacía meses</p></div>
+        </div>
+
+        <h3 class="sub reveal">Hallazgos del diagnóstico</h3>
+        <ul class="points reveal">
+          <li>Los grupos existentes no tenían lógica funcional, y <strong>3 servidores críticos</strong> (entre ellos nómina y contabilidad) estaban mezclados con PCs de usuarios.</li>
+          <li>No había reportes programados ni roles de acceso claros.</li>
+          <li>Las 7 vulnerabilidades con explotación activa confirmada (CISA KEV) llevaban meses vencidas; <strong>los navegadores eran el patrón dominante.</strong></li>
+        </ul>
+
+        <div class="statement statement-warn reveal">
+          <p class="statement-label">Causa raíz</p>
+          <p>Solo existían 4 automations, y la única que desplegó actualizaciones corrió una sola vez (23 de julio de 2026) y nunca más.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rol" class="chapter theme-light">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>02</b>Rol y responsabilidades</p>
+        <h2 class="chapter-title reveal">Del diagnóstico a la implementación.</h2>
+        <p class="copy reveal">Como parte de mi residencia profesional fui <strong>responsable de diagnosticar, diseñar e implementar el proceso</strong>, reportando a mi jefe de TI, quien aprobaba las decisiones.</p>
+
+        <h3 class="sub reveal">Responsabilidades</h3>
+        <ul class="points reveal">
+          <li>Diagnóstico del estado de la flota e identificación de la causa raíz del rezago.</li>
+          <li>Diseño de la estrategia de anillos, de las exclusiones y evaluación del SLA.</li>
+          <li>Clasificación de 171 endpoints e importación a Action1 mediante CSV.</li>
+          <li>Configuración de las automations, la ventana de mantenimiento, el reporte personalizado y el apagado programado.</li>
+          <li>Pruebas manuales con reporte de evidencias por equipo.</li>
+        </ul>
+
+        <div class="statement reveal">
+          <p class="statement-label">Aporte clave</p>
+          <p>Clasifiqué qué equipos de cada área iban en cada anillo, repartiendo los departamentos para que una actualización fallida no detuviera por completo ningún área crítica.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="herramientas" class="chapter theme-gray">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>03</b>Herramientas y tecnologías</p>
+        <h2 class="chapter-title reveal">Una plataforma. Tres marcos de referencia.</h2>
+        <div class="tool-cols">
+          <div class="tool-col reveal">
+            <h3>Plataforma</h3>
+            <ul><li>Action1</li><li>Update Rings</li><li>Automations</li><li>Run Script</li><li>Reportes personalizados</li></ul>
+          </div>
+          <div class="tool-col reveal">
+            <h3>Datos y seguimiento</h3>
+            <ul><li>CSV</li><li>Script de generación de CSV</li><li>Excel</li></ul>
+          </div>
+          <div class="tool-col reveal">
+            <h3>Marcos de referencia</h3>
+            <ul><li>NIST SP 800-40 Rev. 4</li><li>CIS Controls v8.1 · Control 7</li><li>CISA KEV</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solucion" class="chapter theme-light">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>04</b>Solución</p>
+        <h2 class="chapter-title reveal">Una actualización solo avanza si funcionó antes.</h2>
+        <p class="copy reveal">Diseñé un despliegue por anillos (<em>Update Rings</em>) encadenados con la opción “From previous (inner) update ring”. <strong>Cada anillo recibe la actualización solo si tuvo éxito en el anterior</strong>, así cualquier problema aparece primero en un grupo pequeño y controlado.</p>
+
+        <ol class="track reveal" style="--n:5" aria-label="Ciclo mensual de actualizaciones">
+          <li class="muted"><p class="t-name">Patch Tuesday</p><p class="t-when">2.º martes del mes</p></li>
+          <li><p class="t-name">Ring 0</p><p class="t-who">3 equipos de Sistemas</p><p class="t-when">2.º miércoles</p></li>
+          <li><p class="t-name">Ring 1</p><p class="t-who">10 equipos piloto</p><p class="t-when">3.er martes</p></li>
+          <li><p class="t-name">Ring 2</p><p class="t-who">23 equipos de gerentes y jefes de área</p><p class="t-when">3.er viernes</p></li>
+          <li><p class="t-name">Ring 3</p><p class="t-who">Resto de la flota</p><p class="t-when">4.º martes</p></li>
         </ol>
-      </nav>
+        <p class="track-caption reveal">Ciclo mensual de actualizaciones por anillos.</p>
 
-      <article class="case-content">
-        <section id="contexto" class="case-section">
-          <h2><span class="sec-num">01</span>Contexto y problema</h2>
-          <div class="prose">
-            <p>Techemet administraba sus equipos Windows con Action1, pero las actualizaciones se acumulaban sin un proceso que garantizara que los parches se aplicaran de forma continua, ordenada y medible. El diagnóstico que realicé el 14 de agosto de 2026 dimensionó el problema:</p>
-          </div>
-          <div class="kpis">
-            <div class="kpi"><p class="kpi-num">167</p><p class="kpi-label">endpoints administrados</p></div>
-            <div class="kpi"><p class="kpi-num">4,925</p><p class="kpi-label">vulnerabilidades detectadas</p></div>
-            <div class="kpi"><p class="kpi-num">4,340</p><p class="kpi-label">vulnerabilidades vencidas según el SLA</p></div>
-            <div class="kpi"><p class="kpi-num">43</p><p class="kpi-label">equipos con más de 31 días sin conectarse (~26% de la flota)</p></div>
-            <div class="kpi"><p class="kpi-num">11</p><p class="kpi-label">equipos con reinicio pendiente</p></div>
-            <div class="kpi"><p class="kpi-num">7</p><p class="kpi-label">vulnerabilidades CISA KEV vencidas desde hacía meses</p></div>
-          </div>
-          <h3>Hallazgos del diagnóstico</h3>
-          <ul class="bullets">
-            <li>Los grupos existentes no tenían lógica funcional, y 3 servidores críticos (entre ellos nómina y contabilidad) estaban mezclados con PCs de usuarios.</li>
-            <li>No había reportes programados ni roles de acceso claros.</li>
-            <li>Las 7 vulnerabilidades con explotación activa confirmada (CISA KEV) llevaban meses vencidas; los navegadores eran el patrón dominante.</li>
-          </ul>
-          <div class="callout callout-warn">
-            <p class="callout-label">Causa raíz</p>
-            <p>Solo existían 4 <em>automations</em>, y la única que desplegó actualizaciones corrió una sola vez (23 de julio de 2026) y nunca más.</p>
-          </div>
-        </section>
+        <h3 class="sub reveal">Decisiones de diseño</h3>
+        <ul class="points reveal">
+          <li><strong>Exclusiones.</strong> Servidores con actualización manual y equipos especiales fuera del despliegue automático.</li>
+          <li><strong>Continuidad operativa.</strong> Departamentos repartidos entre anillos, para que ningún área crítica dependa de uno solo.</li>
+          <li><strong>Ventana nocturna</strong> de 6 horas, fuera del horario laboral.</li>
+          <li><strong>SLA.</strong> Evaluación del SLA de Action1 (7/15/30/60 días) y propuesta de una categoría acelerada para vulnerabilidades CISA KEV.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="rol" class="case-section">
-          <h2><span class="sec-num">02</span>Rol y responsabilidades</h2>
-          <div class="prose">
-            <p>Como parte de mi residencia profesional fui responsable de diagnosticar, diseñar e implementar el proceso, reportando a mi jefe de TI, quien aprobaba las decisiones.</p>
-          </div>
-          <ul class="bullets">
-            <li>Diagnóstico del estado de la flota e identificación de la causa raíz del rezago.</li>
-            <li>Diseño de la estrategia de anillos, de las exclusiones y evaluación del SLA.</li>
-            <li>Clasificación de 171 endpoints e importación a Action1 mediante CSV.</li>
-            <li>Configuración de las <em>automations</em>, la ventana de mantenimiento, el reporte personalizado y el apagado programado.</li>
-            <li>Pruebas manuales con reporte de evidencias por equipo.</li>
-          </ul>
-          <div class="callout">
-            <p class="callout-label">Aporte clave</p>
-            <p>La parte central de mi propuesta fue clasificar qué equipos de cada área debían ir en cada anillo, dividiendo los departamentos entre distintos anillos para que una actualización fallida no detuviera por completo la operación de ningún área crítica del negocio.</p>
-          </div>
-        </section>
+    <section id="implementacion" class="chapter theme-gray">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>05</b>Implementación</p>
+        <h2 class="chapter-title reveal">171 endpoints. Cuatro anillos.</h2>
+        <p class="copy reveal">Clasifiqué los endpoints en 4 anillos y los importé a Action1 por CSV. <strong>Cada anillo es una automation mensual.</strong></p>
 
-        <section id="herramientas" class="case-section">
-          <h2><span class="sec-num">03</span>Herramientas y tecnologías</h2>
-          <div class="tool-groups">
-            <div class="tool-group">
-              <h3>Plataforma</h3>
-              <ul class="tags tags-neutral"><li>Action1</li><li>Update Rings</li><li>Automations</li><li>Run Script</li><li>Reportes personalizados</li></ul>
-            </div>
-            <div class="tool-group">
-              <h3>Datos y seguimiento</h3>
-              <ul class="tags tags-neutral"><li>CSV</li><li>Script de generación de CSV</li><li>Excel</li></ul>
-            </div>
-            <div class="tool-group">
-              <h3>Marcos de referencia</h3>
-              <ul class="tags tags-neutral"><li>NIST SP 800-40 Rev. 4</li><li>CIS Controls v8.1 · Control 7</li><li>CISA KEV</li></ul>
-            </div>
-          </div>
-        </section>
+        <div class="table-wrap reveal">
+          <table class="table-apple">
+            <thead><tr><th scope="col">Anillo</th><th scope="col">Equipos</th><th scope="col">Ejecución</th><th scope="col">Condición para avanzar</th></tr></thead>
+            <tbody>
+              <tr><td>Ring 0</td><td>3 equipos de Sistemas</td><td>2.º miércoles, 12:30 a.m. (un día después del Patch Tuesday)</td><td>Primer anillo del ciclo</td></tr>
+              <tr><td>Ring 1</td><td>10 equipos piloto</td><td>3.er martes, 12:30 a.m.</td><td>Despliega lo que lleva 6 días en Ring 0 con ≥70% de éxito</td></tr>
+              <tr><td>Ring 2</td><td>23 equipos de gerentes y jefes de área</td><td>3.er viernes, 12:00 a.m.</td><td>Éxito en el anillo anterior</td></tr>
+              <tr><td>Ring 3</td><td>Resto de la flota</td><td>4.º martes, 12:00 a.m.</td><td>Éxito en el anillo anterior</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-        <section id="solucion" class="case-section">
-          <h2><span class="sec-num">04</span>Solución: despliegue progresivo por anillos</h2>
-          <div class="prose">
-            <p>Diseñé un despliegue por anillos (<em>Update Rings</em>) encadenados con la opción “From previous (inner) update ring”: <strong>una actualización solo avanza al siguiente anillo si tuvo éxito en el anterior.</strong> Así, cualquier problema aparece primero en un grupo pequeño y controlado.</p>
-          </div>
+        <h3 class="sub reveal">Pruebas controladas</h3>
+        <p class="copy reveal">Realicé pruebas manuales el 19 y 20 de agosto, con un reporte de evidencias por equipo. <strong>Detectaron cuatro problemas operativos antes del despliegue general:</strong></p>
+        <ul class="points reveal">
+          <li>Equipos apagados durante la ventana de actualización.</li>
+          <li>Un conflicto de versión del cliente VPN.</li>
+          <li>Office instalado por MSI en lugar de Click-To-Run.</li>
+          <li>Equipos con rezago extremo de actualizaciones.</li>
+        </ul>
 
-          <figure class="flow" aria-label="Diagrama del ciclo mensual de actualizaciones por anillos">
-            <div class="flow-step muted"><p class="flow-name">Patch Tuesday</p><p class="flow-when">2.º martes del mes</p></div>
-            <span class="flow-arrow" aria-hidden="true"></span>
-            <div class="flow-step"><p class="flow-name">Ring 0</p><p class="flow-who">3 equipos de Sistemas</p><p class="flow-when">2.º miércoles</p></div>
-            <span class="flow-arrow" aria-hidden="true"></span>
-            <div class="flow-step"><p class="flow-name">Ring 1</p><p class="flow-who">10 equipos piloto</p><p class="flow-when">3.er martes</p></div>
-            <span class="flow-arrow" aria-hidden="true"></span>
-            <div class="flow-step"><p class="flow-name">Ring 2</p><p class="flow-who">23 equipos de gerentes y jefes de área</p><p class="flow-when">3.er viernes</p></div>
-            <span class="flow-arrow" aria-hidden="true"></span>
-            <div class="flow-step"><p class="flow-name">Ring 3</p><p class="flow-who">Resto de la flota</p><p class="flow-when">4.º martes</p></div>
-            <figcaption>Ciclo mensual: cada anillo recibe la actualización solo si tuvo éxito en el anillo anterior.</figcaption>
+        <h3 class="sub reveal">Seguimiento y operación</h3>
+        <ul class="points reveal">
+          <li><strong>“Reporte Semanal” personalizado</strong> que excluye el grupo Stop (equipos fuera de servicio) para medir solo los 125 equipos activos. Lo construí desde cero porque clonar el reporte nativo no permitía filtrar por grupo.</li>
+          <li><strong>Excel semanal con KPIs</strong> a partir del reporte.</li>
+          <li><strong>Apagado programado</strong> los viernes mediante una automation de tipo Run Script.</li>
+        </ul>
+        <p class="code-label reveal">Run Script · apagado programado</p>
+<pre class="code reveal"><code>shutdown /s /t 60</code></pre>
+      </div>
+    </section>
+
+    <section id="evidencia" class="chapter theme-dark">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>06</b>Evidencia visual y técnica</p>
+        <h2 class="chapter-title reveal">La configuración, en la consola.</h2>
+        <p class="copy reveal">Capturas de la configuración real en Action1, sin datos de equipos ni usuarios. Toca una imagen para ampliarla.</p>
+      </div>
+      <div class="scroller-wrap reveal" data-scroller>
+        <div class="scroller">
+          <figure class="slide">
+            <button class="zoom" type="button"><img src="../assets/action1/lista-automations.png" width="1432" height="214" loading="lazy" alt="Lista de automations Update Ring 0 a Update Ring 3 en Action1 con su calendario mensual"></button>
+            <figcaption><strong>Automations de los 4 anillos.</strong> 2.º miércoles, 3.er martes, 3.er viernes y 4.º martes de cada mes, cada una encadenada a la anterior.</figcaption>
           </figure>
+          <figure class="slide">
+            <button class="zoom" type="button"><img src="../assets/action1/ring1-update-ring.png" width="1123" height="886" loading="lazy" alt="Paso Update Ring de Ring 1: From previous (inner) update ring con Update Ring 0, despliegue tras 6 días con éxito mínimo de 70 por ciento"></button>
+            <figcaption><strong>Configuración de Ring 1.</strong> Toma las actualizaciones de Ring 0 tras 6 días con ≥70% de éxito y espera 1 día desde su publicación.</figcaption>
+          </figure>
+          <figure class="slide">
+            <button class="zoom" type="button"><img src="../assets/action1/ring0-schedule.png" width="1080" height="520" loading="lazy" alt="Paso Schedule de Ring 0: mensual, segundo miércoles a las 12:30 a.m., plazo de finalización de 6 horas"></button>
+            <figcaption><strong>Programación de Ring 0.</strong> Mensual, 2.º miércoles a las 12:30 a.m., con plazo de finalización de 6 horas.</figcaption>
+          </figure>
+          <figure class="slide">
+            <button class="zoom" type="button"><img src="../assets/action1/ring0-endpoints.png" width="1074" height="255" loading="lazy" alt="Paso Select Endpoints de Ring 0 con el grupo de endpoints Ring 0"></button>
+            <figcaption><strong>Destino de Ring 0.</strong> La automation se ejecuta sobre el grupo de endpoints “Ring 0”.</figcaption>
+          </figure>
+        </div>
+        <div class="scroller-nav">
+          <button type="button" data-dir="-1" aria-label="Anterior">‹</button>
+          <button type="button" data-dir="1" aria-label="Siguiente">›</button>
+        </div>
+      </div>
+    </section>
 
-          <h3>Decisiones de diseño</h3>
-          <ul class="bullets">
-            <li><strong>Exclusiones:</strong> servidores con actualización manual y equipos especiales fuera del despliegue automático.</li>
-            <li><strong>Continuidad operativa:</strong> departamentos repartidos entre anillos, para que ningún área crítica dependa de un solo anillo.</li>
-            <li><strong>Ventana nocturna</strong> de 6 horas fuera del horario laboral.</li>
-            <li><strong>SLA:</strong> evaluación del SLA de Action1 (7/15/30/60 días) y propuesta de una categoría acelerada para vulnerabilidades CISA KEV.</li>
-          </ul>
-        </section>
+    <section id="resultados" class="chapter theme-light">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>07</b>Resultados e impacto</p>
+        <h2 class="chapter-title reveal">De una ejecución aislada a un ciclo mensual.</h2>
+        <p class="copy reveal">El cambio principal fue pasar de un despliegue que había corrido una sola vez a un <strong>ciclo mensual, escalonado y medible</strong>.</p>
 
-        <section id="implementacion" class="case-section">
-          <h2><span class="sec-num">05</span>Implementación</h2>
-          <div class="prose">
-            <p>Clasifiqué 171 endpoints en 4 anillos y los importé a Action1 por CSV. Cada anillo es una <em>automation</em> mensual:</p>
-          </div>
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr><th scope="col">Anillo</th><th scope="col">Equipos</th><th scope="col">Ejecución</th><th scope="col">Condición para avanzar</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Ring 0</td><td>3 equipos de Sistemas</td><td>2.º miércoles, 12:30 a.m. (un día después del Patch Tuesday)</td><td>Primer anillo del ciclo</td></tr>
-                <tr><td>Ring 1</td><td>10 equipos piloto</td><td>3.er martes, 12:30 a.m.</td><td>Despliega lo que lleva 6 días en Ring 0 con ≥70% de éxito</td></tr>
-                <tr><td>Ring 2</td><td>23 equipos de gerentes y jefes de área</td><td>3.er viernes, 12:00 a.m.</td><td>Éxito en el anillo anterior</td></tr>
-                <tr><td>Ring 3</td><td>Resto de la flota</td><td>4.º martes, 12:00 a.m.</td><td>Éxito en el anillo anterior</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="table-wrap reveal">
+          <table class="table-apple">
+            <thead><tr><th scope="col">Aspecto</th><th scope="col">Antes (diagnóstico, 14-ago-2026)</th><th scope="col">Después</th></tr></thead>
+            <tbody>
+              <tr><td>Despliegue de parches</td><td>1 automation de despliegue que corrió una sola vez</td><td class="after">4 automations mensuales encadenadas por anillos</td></tr>
+              <tr><td>Organización de equipos</td><td>Grupos sin lógica; 3 servidores críticos mezclados con PCs</td><td class="after">171 endpoints en 4 anillos; servidores con actualización manual</td></tr>
+              <tr><td>Seguimiento</td><td>Sin reportes programados</td><td class="after">Reporte Semanal sobre 125 equipos activos y Excel de KPIs</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-          <h3>Pruebas controladas</h3>
-          <div class="prose">
-            <p>Realicé pruebas manuales el 19 y 20 de agosto, con un reporte de evidencias por equipo. Las pruebas detectaron cuatro problemas operativos antes del despliegue general:</p>
-          </div>
-          <ul class="bullets">
-            <li>Equipos apagados durante la ventana de actualización.</li>
-            <li>Un conflicto de versión del cliente VPN.</li>
-            <li>Office instalado por MSI en lugar de Click-To-Run.</li>
-            <li>Equipos con rezago extremo de actualizaciones.</li>
-          </ul>
+        <h3 class="sub reveal">Otros resultados</h3>
+        <ul class="points points-ok reveal">
+          <li>Las pruebas del 19 y 20 de agosto detectaron 4 problemas operativos antes del despliegue general.</li>
+          <li>El primer KPI semanal mostró que Google Chrome estaba pendiente en el 95% de los equipos activos, coherente con el patrón de navegadores del diagnóstico.</li>
+        </ul>
 
-          <h3>Seguimiento y operación</h3>
-          <ul class="bullets">
-            <li><strong>“Reporte Semanal” personalizado</strong> que excluye el grupo <em>Stop</em> (equipos fuera de servicio) para medir solo los 125 equipos activos. Lo construí desde cero porque clonar el reporte nativo no permitía filtrar por grupo.</li>
-            <li><strong>Excel semanal con KPIs</strong> a partir del reporte.</li>
-            <li><strong>Apagado programado</strong> los viernes mediante una <em>automation</em> de tipo Run Script:</li>
-          </ul>
-<pre class="code"><code>shutdown /s /t 60</code></pre>
-        </section>
+        <div class="statement statement-warn reveal">
+          <p class="statement-label">Pendiente de medición</p>
+          <p>Aún no se ha medido la reducción de vulnerabilidades después de un ciclo completo de anillos.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="evidencia" class="case-section">
-          <h2><span class="sec-num">06</span>Evidencia visual y técnica</h2>
-          <div class="prose">
-            <p>Capturas de la configuración real en la consola de Action1, sin datos de equipos ni usuarios. Toca una imagen para ampliarla.</p>
-          </div>
-          <div class="gallery">
-            <figure>
-              <button class="zoom" type="button"><img src="../assets/action1/lista-automations.png" width="1432" height="214" loading="lazy" alt="Lista de automations Update Ring 0 a Update Ring 3 en Action1 con su calendario mensual"></button>
-              <figcaption><strong>Automations de los 4 anillos.</strong> 2.º miércoles, 3.er martes, 3.er viernes y 4.º martes de cada mes, cada una encadenada a la anterior.</figcaption>
-            </figure>
-            <figure>
-              <button class="zoom" type="button"><img src="../assets/action1/ring1-update-ring.png" width="1123" height="886" loading="lazy" alt="Paso Update Ring de Ring 1: From previous (inner) update ring con Update Ring 0, despliegue tras 6 días con éxito mínimo de 70 por ciento"></button>
-              <figcaption><strong>Configuración de Ring 1.</strong> Toma las actualizaciones de Ring 0 tras 6 días con ≥70% de éxito y espera 1 día desde su publicación.</figcaption>
-            </figure>
-            <figure>
-              <button class="zoom" type="button"><img src="../assets/action1/ring0-schedule.png" width="1080" height="520" loading="lazy" alt="Paso Schedule de Ring 0: mensual, segundo miércoles a las 12:30 a.m., plazo de finalización de 6 horas"></button>
-              <figcaption><strong>Programación de Ring 0.</strong> Mensual, 2.º miércoles a las 12:30 a.m., con plazo de finalización de 6 horas.</figcaption>
-            </figure>
-            <figure>
-              <button class="zoom" type="button"><img src="../assets/action1/ring0-endpoints.png" width="1074" height="255" loading="lazy" alt="Paso Select Endpoints de Ring 0 con el grupo de endpoints Ring 0"></button>
-              <figcaption><strong>Destino de Ring 0.</strong> La automation se ejecuta sobre el grupo de endpoints “Ring 0”.</figcaption>
-            </figure>
-          </div>
-        </section>
+    <section id="aprendizajes" class="chapter theme-gray">
+      <div class="wrap">
+        <p class="chapter-label reveal"><b>08</b>Aprendizajes</p>
+        <h2 class="chapter-title reveal">La causa raíz era de proceso, no de herramienta.</h2>
+        <ul class="points reveal">
+          <li><strong>Revisar el proceso antes que la herramienta.</strong> El rezago venía de una automation que solo corrió una vez, no de falta de capacidades en Action1.</li>
+          <li><strong>Las pruebas manuales revelan lo que la consola no muestra.</strong> Equipos apagados, conflictos de versiones e instalaciones de Office no estándar aparecieron al probar equipo por equipo.</li>
+          <li><strong>Medir solo lo que importa.</strong> El reporte nativo no permitía filtrar por grupo; construir uno propio permitió excluir los equipos fuera de servicio.</li>
+          <li><strong>Mejora identificada.</strong> Falta un periodo de observación entre anillos para detectar fallas tardías; confirmé que Action1 permite desinstalar actualizaciones de Windows por equipo como plan de reversión.</li>
+        </ul>
 
-        <section id="resultados" class="case-section">
-          <h2><span class="sec-num">07</span>Resultados e impacto</h2>
-          <div class="prose">
-            <p>El cambio principal fue pasar de un despliegue que había corrido una sola vez a un <strong>ciclo mensual, escalonado y medible</strong>.</p>
-          </div>
-          <div class="table-wrap">
-            <table class="data-table">
-              <thead>
-                <tr><th scope="col">Aspecto</th><th scope="col">Antes (diagnóstico, 14-ago-2026)</th><th scope="col">Después</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Despliegue de parches</td><td>1 automation de despliegue que corrió una sola vez</td><td>4 automations mensuales encadenadas por anillos</td></tr>
-                <tr><td>Organización de equipos</td><td>Grupos sin lógica; 3 servidores críticos mezclados con PCs</td><td>171 endpoints en 4 anillos; servidores con actualización manual</td></tr>
-                <tr><td>Seguimiento</td><td>Sin reportes programados</td><td>Reporte Semanal sobre 125 equipos activos y Excel de KPIs</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <h3>Otros resultados</h3>
-          <ul class="checks">
-            <li class="done">Las pruebas del 19 y 20 de agosto detectaron 4 problemas operativos antes del despliegue general.</li>
-            <li class="done">El primer KPI semanal mostró que Google Chrome estaba pendiente en el 95% de los equipos activos, coherente con el patrón de navegadores del diagnóstico.</li>
-          </ul>
-          <div class="callout callout-warn">
-            <p class="callout-label">Pendiente de medición</p>
-            <p>Aún no se ha medido la reducción de vulnerabilidades después de un ciclo completo de anillos.</p>
-          </div>
-        </section>
+        <h3 class="sub reveal">Documentación elaborada</h3>
+        <div class="docs reveal">
+          <div><h3>Documento de diagnóstico</h3><p>Estado inicial de la flota y causa raíz del rezago.</p></div>
+          <div><h3>Propuesta de diseño</h3><p>Anillos de despliegue, exclusiones y evaluación del SLA.</p></div>
+          <div><h3>Configuración de Rings y reporte</h3><p>Parámetros de cada anillo y del “Reporte Semanal”.</p></div>
+          <div><h3>Script de generación de CSV</h3><p>Clasificación de los endpoints para importarlos a Action1.</p></div>
+        </div>
+      </div>
+    </section>
 
-        <section id="aprendizajes" class="case-section">
-          <h2><span class="sec-num">08</span>Aprendizajes</h2>
-          <ul class="bullets">
-            <li><strong>La causa raíz era de proceso, no de herramienta.</strong> El rezago venía de una automation que solo corrió una vez, no de falta de capacidades en Action1.</li>
-            <li><strong>Las pruebas manuales revelan lo que la consola no muestra.</strong> Equipos apagados, conflictos de versiones e instalaciones de Office no estándar aparecieron al probar equipo por equipo.</li>
-            <li><strong>Medir solo lo que importa.</strong> El reporte nativo no permitía filtrar por grupo; construir uno propio permitió excluir los equipos fuera de servicio.</li>
-            <li><strong>Mejora identificada.</strong> Falta un periodo de observación entre anillos para detectar fallas tardías; confirmé que Action1 permite desinstalar actualizaciones de Windows por equipo como plan de reversión.</li>
-          </ul>
-
-          <h3>Documentación elaborada</h3>
-          <div class="deliverables">
-            <div class="deliverable"><h3>Documento de diagnóstico</h3><p>Estado inicial de la flota y causa raíz del rezago.</p></div>
-            <div class="deliverable"><h3>Propuesta de diseño</h3><p>Anillos de despliegue, exclusiones y evaluación del SLA.</p></div>
-            <div class="deliverable"><h3>Configuración de Rings y reporte</h3><p>Parámetros de cada anillo y del “Reporte Semanal”.</p></div>
-            <div class="deliverable"><h3>Script de generación de CSV</h3><p>Clasificación de los endpoints para importarlos a Action1.</p></div>
-          </div>
-        </section>
-      </article>
-    </div>
-
-    <nav class="container pager" aria-label="Otros casos">
-      <a class="next" href="auditoria-rutas-ia.html"><small>Siguiente caso →</small><strong>Auditoría de una app de rutas generadas con IA</strong></a>
-    </nav>
+    <section class="block next-case theme-light">
+      <div class="wrap center">
+        <p class="eyebrow reveal">Siguiente caso</p>
+        <h2 class="title reveal">Auditoría de una app de rutas generadas con IA.</h2>
+        <div class="ctas reveal">
+          <a class="pill" href="auditoria-rutas-ia.html">Ver el caso 02</a>
+          <a class="more" href="../index.html#casos">Todos los casos</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 David García Vera</p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 David García Vera.</p>
       <p><a href="../index.html#contacto">Contacto</a></p>
     </div>
   </footer>
-
-  <a class="to-top" href="#contenido" aria-label="Volver arriba">↑</a>
 
   <dialog class="lightbox" aria-label="Imagen ampliada">
     <button class="lightbox-close" type="button" aria-label="Cerrar">×</button>
