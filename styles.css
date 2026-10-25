@@ -312,3 +312,4 @@ a.project-card:hover { transform: translateY(-2px); border-color: var(--accent);
 .deliverable p { margin: 0 0 8px; font-size: .92rem; }
 .deliverable p:last-child { margin-bottom: 0; }
 .two-up { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.gallery .placeholder-figure { min-height: 160px; flex: 1; }
